@@ -351,6 +351,119 @@ a {
 	background: var(--accent);
 }
 
+/* Sprint Mobile-Nav-A: nav-cta mobilde gizli, drawer içindeki nav-cta-mobile kullanılır */
+@media (max-width: 819px) {
+	.nav-cta {
+		display: none;
+	}
+}
+
+/* Hamburger button — sadece mobilde görünür (<820px) */
+.nav-hamburger {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border: 0;
+	padding: 8px;
+	cursor: pointer;
+	color: var(--ink);
+	border-radius: 8px;
+	transition: background 0.15s ease;
+}
+.nav-hamburger:hover {
+	background: var(--bg-2);
+}
+@media (min-width: 820px) {
+	.nav-hamburger {
+		display: none;
+	}
+}
+
+/* Mobile drawer + backdrop */
+.nav-mobile-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(15, 23, 42, 0.5);
+	z-index: 998;
+	animation: backdrop-in 0.2s ease;
+}
+.nav-mobile-drawer {
+	position: fixed;
+	top: 64px;
+	left: 16px;
+	right: 16px;
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	padding: 20px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+	z-index: 999;
+	animation: drawer-in 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.nav-mobile-drawer a {
+	display: block;
+	padding: 12px 4px;
+	font-size: 17px;
+	font-weight: 500;
+	color: var(--ink);
+	border-bottom: 1px solid var(--border-2);
+	transition: color 0.15s ease;
+}
+.nav-mobile-drawer a:last-of-type {
+	border-bottom: 0;
+}
+.nav-mobile-drawer a:hover {
+	color: var(--accent);
+}
+.nav-mobile-drawer a.is-active {
+	color: var(--accent);
+	font-weight: 600;
+}
+.nav-cta-mobile {
+	margin-top: 8px;
+	background: var(--ink);
+	color: #fff;
+	border: 0;
+	padding: 14px;
+	border-radius: 999px;
+	font-size: 15px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: background 0.15s ease;
+}
+.nav-cta-mobile:hover {
+	background: var(--accent);
+}
+@media (min-width: 820px) {
+	.nav-mobile-backdrop,
+	.nav-mobile-drawer {
+		display: none;
+	}
+}
+
+@keyframes backdrop-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes drawer-in {
+	from {
+		opacity: 0;
+		transform: translateY(-8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 /* ================================================
    Buttons (primary / secondary)
    ================================================ */
