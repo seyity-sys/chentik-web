@@ -151,6 +151,10 @@
 
 	--font:
 		'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	/* Veliler sayfası özel — mor aksan (Sprint 2) */
+	--v-purple: #7c3aed;
+	--v-purple-soft: rgba(124, 58, 237, 0.1);
 }
 
 /* ================================================
@@ -1179,4 +1183,213 @@ a {
 	100% {
 		opacity: 1;
 	}
+}
+
+/* ================================================
+   Nav active page indicator (Sprint 2)
+   ================================================ */
+.nav-links a.is-active {
+	color: var(--ink);
+	font-weight: 600;
+}
+.nav-links a.is-active::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -22px;
+	height: 2px;
+	background: var(--accent);
+	border-radius: 1px;
+}
+
+/* ================================================
+   /veliler sayfası özel CSS (Sprint 2)
+   ================================================ */
+.v-eyebrow-purple {
+	color: var(--v-purple);
+}
+.v-eyebrow-purple .dot {
+	background: var(--v-purple);
+	box-shadow: 0 0 0 4px var(--v-purple-soft);
+}
+
+/* Hero — anasayfa hero ile uyumlu, küçük ayarlamalar */
+.v-hero .hero-h1 {
+	max-width: 16ch;
+}
+.v-hero .hero-sub {
+	max-width: 50ch;
+}
+
+/* Section bg ritim — veliler sayfası */
+.v-veli-screens {
+	background: var(--bg-2);
+	border-top: 1px solid var(--border-2);
+	border-bottom: 1px solid var(--border-2);
+}
+.v-child-data {
+	background: var(--bg);
+}
+.v-limits {
+	background: var(--bg-2);
+	border-top: 1px solid var(--border-2);
+	border-bottom: 1px solid var(--border-2);
+}
+.v-faq {
+	background: var(--bg-2);
+	border-top: 1px solid var(--border-2);
+}
+
+/* 3-mockup grid (Veli arayüzü + Çocuk verisi) */
+.v-screens-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 56px;
+	justify-items: center;
+}
+@media (min-width: 900px) {
+	.v-screens-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 36px;
+	}
+}
+.v-screen-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 18px;
+	max-width: 340px;
+}
+.v-screen-item-tight {
+	gap: 14px;
+}
+.v-screen-caption {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--ink);
+	letter-spacing: -0.005em;
+}
+.v-screen-caption-purple {
+	color: var(--v-purple);
+}
+.v-screen-body {
+	font-size: 14.5px;
+	line-height: 1.6;
+	color: var(--ink-2);
+	text-align: center;
+	margin: 0;
+	max-width: 30ch;
+}
+
+/* Sınırlar — 4 kart */
+.v-limits-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+@media (min-width: 720px) {
+	.v-limits-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 22px;
+	}
+}
+@media (min-width: 1100px) {
+	.v-limits-grid {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 22px;
+	}
+}
+.v-limit-card {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: var(--rad-lg);
+	padding: 26px 26px 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	min-height: 240px;
+	transition:
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+.v-limit-card:hover {
+	box-shadow: var(--shadow);
+	transform: translateY(-2px);
+}
+.v-limit-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.v-limit-icon {
+	color: var(--ink-3);
+	width: 32px;
+	height: 32px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.v-limit-title {
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	margin: 0;
+	color: var(--ink);
+	line-height: 1.25;
+}
+.v-limit-body {
+	font-size: 14.5px;
+	line-height: 1.6;
+	color: var(--ink-2);
+	margin: 0;
+}
+
+/* SSS */
+.v-faq-container {
+	max-width: 760px;
+}
+.v-faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.v-faq-item {
+	background: #fff;
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	transition: box-shadow 0.15s ease;
+}
+.v-faq-item.is-open {
+	box-shadow: var(--shadow-xs);
+}
+.v-faq-q {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 18px 22px;
+	text-align: left;
+	font-size: 15.5px;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	color: var(--ink);
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	border-radius: 14px;
+}
+.v-faq-q svg {
+	color: var(--ink-2);
+	flex: 0 0 auto;
+}
+.v-faq-a {
+	padding: 0 22px 20px;
+}
+.v-faq-a p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.65;
+	color: var(--ink-2);
 }

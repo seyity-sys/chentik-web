@@ -1,11 +1,20 @@
 <script lang="ts">
 	import ChentikLogo from './ChentikLogo.svelte';
 
-	let { onDownload }: { onDownload: () => void } = $props();
+	type Page = 'home' | 'veliler' | 'bilim';
+
+	let {
+		onDownload,
+		activePage = 'home'
+	}: { onDownload: () => void; activePage?: Page } = $props();
+
+	const isHome = $derived(activePage === 'home');
 
 	function handleBrandClick(e: MouseEvent) {
-		e.preventDefault();
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		if (isHome) {
+			e.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
 	}
 </script>
 
@@ -18,9 +27,9 @@
 			</span>
 		</a>
 		<div class="nav-links">
-			<a href="#nasil">Nasıl çalışır</a>
-			<a href="#bilim">Bilim</a>
-			<a href="#veliler">Veliler için</a>
+			<a href={isHome ? '#nasil' : '/#nasil'}>Nasıl çalışır</a>
+			<a href="/bilim" class:is-active={activePage === 'bilim'} aria-current={activePage === 'bilim' ? 'page' : undefined}>Bilim</a>
+			<a href="/veliler" class:is-active={activePage === 'veliler'} aria-current={activePage === 'veliler' ? 'page' : undefined}>Veliler için</a>
 		</div>
 		<button type="button" class="nav-cta" onclick={onDownload}> İndir </button>
 	</div>
