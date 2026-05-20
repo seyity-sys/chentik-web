@@ -1,25 +1,50 @@
 <script lang="ts">
-	// Chentik landing — içerik sonraki sprint'te
+	import Nav from '$lib/components/Nav.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import Steps from '$lib/components/Steps.svelte';
+	import Parents from '$lib/components/Parents.svelte';
+	import PdfOutput from '$lib/components/PdfOutput.svelte';
+	import Science from '$lib/components/Science.svelte';
+	import FinalCTA from '$lib/components/FinalCTA.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import DownloadModal from '$lib/components/DownloadModal.svelte';
+
+	let modalOpen = $state(false);
+
+	function openDownload() {
+		modalOpen = true;
+	}
+
+	function closeDownload() {
+		modalOpen = false;
+	}
 </script>
 
 <svelte:head>
-	<title>Chentik — LGS yanlışlarını unutma, başarıyı yakala</title>
+	<title>Chentik — Her hata bir çentik. Her çentik bir adım.</title>
 	<meta
 		name="description"
-		content="Chentik LGS'ye hazırlanan ortaokul öğrencileri için akıllı yanlış defteri uygulaması."
+		content="Yanlış defteri ve aralıklı tekrar sistemi ile LGS hazırlığı. 5-8. sınıf öğrencileri için. Reklamsız, çocuk güvenli, ücretsiz."
 	/>
+	<meta property="og:title" content="Chentik — Her hata bir çentik. Her çentik bir adım." />
+	<meta
+		property="og:description"
+		content="LGS hazırlığı için yanlış defteri + aralıklı tekrar. AI ders ve konuyu tespit eder, sistem 1-3-7-21 gün aralığıyla hatırlatır."
+	/>
+	<meta property="og:image" content="https://chentik.app/web-images/shot-home.png" />
+	<meta property="og:url" content="https://chentik.app" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 
-<main>
-	<h1>Chentik</h1>
-	<p>Web sitesi yapım aşamasında...</p>
-</main>
+<Nav onDownload={openDownload} />
+<Hero onDownload={openDownload} />
+<Steps />
+<Parents />
+<PdfOutput />
+<Science />
+<FinalCTA onDownload={openDownload} />
+<Footer />
 
-<style>
-	main {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 24px;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	}
-</style>
+<DownloadModal open={modalOpen} onClose={closeDownload} />
