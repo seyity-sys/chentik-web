@@ -26,9 +26,9 @@
 			<div class="footer-col">
 				<h4>Yasal</h4>
 				<ul>
-					<li><a href="https://chentik.app/cocuk-verisi">Çocuk verisi</a></li>
-					<li><a href="https://chentik.app/kvkk-aydinlatma">KVKK Aydınlatma</a></li>
-					<li><a href="https://chentik.app/gizlilik-politikasi">Gizlilik Politikası</a></li>
+					<li><a href="/cocuk-verisi">Çocuk verisi</a></li>
+					<li><a href="/kvkk-aydinlatma">KVKK Aydınlatma</a></li>
+					<li><a href="/gizlilik-politikasi">Gizlilik Politikası</a></li>
 				</ul>
 			</div>
 			<div class="footer-col">
