@@ -54,34 +54,54 @@
 					<path d="M6 6 L18 18 M6 18 L18 6" />
 				</svg>
 			</button>
-			<h3 id="modal-title" class="modal-title">Chentik şu an Beta'da</h3>
+			<h3 id="modal-title" class="modal-title">Chentik'i indir</h3>
 
 			<p class="modal-text">
-				App Store onayını bekliyoruz. iOS uygulaması çok yakında — Google Play sonra.
+				Chentik şu an beta sürümde. iOS'ta TestFlight üzerinden ücretsiz deneyebilirsin.
 			</p>
-			<p class="modal-text">Yeniliklerden haberdar olmak veya geri bildirim için:</p>
 
-			<a class="modal-email" href="mailto:merhaba@chentik.app">
-				<svg
-					viewBox="0 0 24 24"
-					width="16"
-					height="16"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					aria-hidden="true"
+			<div class="modal-stores">
+				<a
+					class="modal-store-btn modal-store-btn--active"
+					href="https://testflight.apple.com/join/BtNnGgJh"
+					target="_blank"
+					rel="noopener"
 				>
-					<rect x="3" y="5" width="18" height="14" rx="2" />
-					<polyline points="3 7 12 13 21 7" />
-				</svg>
-				merhaba@chentik.app
-			</a>
+					<svg
+						viewBox="0 0 24 24"
+						width="18"
+						height="18"
+						fill="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							d="M17.05 20.28c-.98.95-2.05.88-3.08.42-1.09-.47-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.42C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
+						/>
+					</svg>
+					TestFlight'tan indir
+				</a>
 
-			<div class="modal-footer-text">
-				Üyelik istemiyoruz, email toplamıyoruz. Tamamen ücretsiz.
+				<div class="modal-store-note">
+					Önce App Store'dan TestFlight uygulamasını indir, sonra bu bağlantıya dokun.
+				</div>
+
+				<span class="modal-store-btn modal-store-btn--disabled" aria-disabled="true">
+					<svg
+						viewBox="0 0 24 24"
+						width="18"
+						height="18"
+						fill="currentColor"
+						aria-hidden="true"
+					>
+						<path
+							d="M3 20.5V3.5c0-.6.4-1 .9-1.1l13.9 8c.5.3.5 1.1 0 1.4l-13.9 8c-.5.2-.9-.2-.9-.7z"
+						/>
+					</svg>
+					Google Play — çok yakında
+				</span>
 			</div>
+
+			<div class="modal-footer-text">Tamamen ücretsiz. Üyelik istemiyoruz.</div>
 		</div>
 	</div>
 {/if}
