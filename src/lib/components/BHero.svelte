@@ -15,7 +15,7 @@
 			<div>
 				<div class="eyebrow"><span class="dot"></span>Bilim</div>
 				<h1 class="hero-h1 bilim-hero-h1">
-					Üç pazarlama vaadi yok.<br />Yedi bilimsel temel var.
+					Her özellik, bir bilimsel temel…
 				</h1>
 				<p class="hero-sub bilim-hero-sub">
 					Chentik'in arkasında bir mit yok. Eğitim psikolojisinin son 140 yılda kurduğu yedi sade

@@ -21,10 +21,9 @@
 	<div class="container">
 		<div class="section-head">
 			<div class="eyebrow v-eyebrow-purple"><span class="dot"></span>Veli arayüzü</div>
-			<h2 class="h2">Kendi ekranınız sade.</h2>
+			<h2 class="h2">Sade bir veli ekranı.</h2>
 			<p class="lede">
-				Profil, çocuklarınız, izinler. Bildirim yok, reklam yok, "çocuğunuza şunu söyleyin" uyarısı
-				yok.
+				Çocuğunuzun durumu ve izinler bir arada. İhtiyacınız olan her şey, tek bir görünümde.
 			</p>
 		</div>
 		<div class="v-screens-grid">

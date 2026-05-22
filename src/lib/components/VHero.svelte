@@ -13,12 +13,10 @@
 					5–8. sınıf · Veli paneli
 				</div>
 				<h1 class="hero-h1">
-					Çocuğunuza yer açın.<br />Yanında durun.
+					Görün, ama gölgede kalın.
 				</h1>
 				<p class="hero-sub">
-					Veli paneli notlar göstermez, baskı yapmaz, hatırlatma göndermez. Çocuğunuzun
-					çalıştığını ve hangi konularda zorlandığını görürsünüz. Yorum yok, sadece veri. Karar
-					yine çocuğun, sohbet yine sizin.
+					Çocuğunuzun çalışmasını ve sınavlarını izlersiniz — karar onun.
 				</p>
 				<div class="hero-cta-row">
 					<button type="button" class="btn-primary" onclick={onDownload}>

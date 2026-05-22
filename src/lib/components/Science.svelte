@@ -150,9 +150,8 @@
 				</div>
 				<h3 class="sci-title">Öz disiplin, IQ'dan güçlü</h3>
 				<p class="sci-body">
-					Öz disiplin, akademik başarıyı IQ'dan iki kat daha güçlü yordar. 11–14 yaş bu becerinin
-					geliştiği kritik dönem. Chentik düşük sürtünmeli bir alışkanlık olarak bu kasa düzenli yük
-					bindirir.
+					Başarıda öz disiplin, IQ'dan iki kat daha önemli. 11–14 yaş bu becerinin geliştiği
+					altın dönem. Chentik kolay bir alışkanlık olarak bu döneme düzenli yük bindirir.
 				</p>
 				<div class="sci-cite">Duckworth &amp; Seligman, Penn. Üni., 2005</div>
 			</article>

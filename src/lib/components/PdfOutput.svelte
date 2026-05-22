@@ -6,15 +6,14 @@
 	<div class="container">
 		<div class="section-head">
 			<div class="eyebrow"><span class="dot"></span>PDF çıktı</div>
-			<h2 class="h2">Defterin cebinde, kağıtta, etüt'te.</h2>
+			<h2 class="h2">Defterin her an cebinde.</h2>
 			<p class="parents-subtitle">
 				Telefonda biriken yanlışları PDF olarak indir. Yazdır, etüt'e götür, tatilde kağıt-kalemle
 				çalış.
 			</p>
 			<p class="lede">
-				Telefon her zaman elinin altında olmaz. Tatilde, otobüste, internetsiz bir köy okulunda
-				kağıttan çalışmak gerekebilir. Chentik yanlışlarını profesyonel format bir PDF olarak
-				indirmene imkan verir — konuya göre düzenli, fotoğraflarla birlikte.
+				Yanlışlarını profesyonel bir PDF olarak indir — konuya göre düzenli, fotoğraflarıyla
+				birlikte. İstediğin an yazdır, kağıttan çalış.
 			</p>
 		</div>
 

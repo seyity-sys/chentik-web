@@ -5,7 +5,7 @@
 		{
 			num: '01',
 			title: 'Foto çek',
-			body: 'Yanlış yaptığın soruyu telefonla çek. 8 saniyede biter. Defter, kalem, gece elle yazmak yok.',
+			body: 'Yanlış yaptığın soruyu telefonla çek. Hepsi bu — elle yazmak, deftere geçirmek yok.',
 			image: '/web-images/shot-capture.png',
 			alt: 'Soru çekme ekranı'
 		},
@@ -19,7 +19,7 @@
 		{
 			num: '03',
 			title: 'Aralıklı tekrar',
-			body: '1, 3, 7 ve 21 gün sonra karşına çıkar. Üst üste 4 doğru cevaplarsan o yanlış defterden silinir.',
+			body: 'Sistem aynı yanlışı 1, 3, 7 ve 21 gün sonra sana hatırlatır. Dört tekrarın sonunda o konu pekişir, tekrar listenden çıkar ama arşivinde kalır.',
 			image: '/web-images/shot-repeat.png',
 			alt: 'Aralıklı tekrar ekranı'
 		},

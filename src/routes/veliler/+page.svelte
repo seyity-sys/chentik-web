@@ -24,10 +24,10 @@
 	<title>Veliler için — Chentik</title>
 	<meta
 		name="description"
-		content="Sakin bir veli paneli. Çocuğunuzu izlemek için değil, yanında durmak için. Veli onay süreci, izin temelli bağlantı, sınırlar."
+		content="Çocuğunuzun çalışmasını ve sınavlarını izleyin, kararı ona bırakın. Chentik veli ekranı: baskı değil, görünürlük."
 	/>
 	<meta property="og:title" content="Veliler için — Chentik" />
-	<meta property="og:description" content="Veli paneli notlar göstermez, baskı yapmaz. Sadece veri." />
+	<meta property="og:description" content="Çocuğunuzun çalışmasını ve sınavlarını izleyin, kararı ona bırakın." />
 	<meta property="og:image" content="https://chentik.app/web-images/v-bugun.png" />
 	<meta property="og:url" content="https://chentik.app/veliler" />
 	<meta property="og:type" content="website" />

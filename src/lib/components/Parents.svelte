@@ -20,12 +20,10 @@
 	<div class="container">
 		<div class="section-head">
 			<div class="eyebrow"><span class="dot"></span>Veliler için</div>
-			<h2 class="h2">Sakin bir veli paneli.</h2>
+			<h2 class="h2">Çocuğunuzun gelişimi, tek bakışta.</h2>
 			<p class="parents-subtitle">Çocuğunuzu izlemek için değil, yanında durmak için.</p>
 			<p class="lede">
-				Veli paneli notlar göstermez, baskı yapmaz, hatırlatma göndermez. Sadece çocuğunuzun
-				çalıştığını ve hangi konularda zorlandığını görmenizi sağlar. Yorum yok, sadece veri. Karar
-				yine çocuğun, sohbet yine sizin.
+				Çocuğunuzun çalışmasını ve sınavlarını izlersiniz — karar onun.
 			</p>
 		</div>
 

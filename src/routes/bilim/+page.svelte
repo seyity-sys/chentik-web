@@ -77,7 +77,7 @@
 		},
 		{
 			text:
-				"Sonuç çarpıcı: öz disiplin, akademik başarıyı IQ'dan iki kat daha güçlü yordadı. Öz disiplini yüksek öğrenciler her ölçütte (notlar, sınav puanları, devam, ödeve başlama saati, TV izleme süresi) akranlarını geçti. 2021'de aynı bulgu 589 öğrencide 6-7. sınıflar için yeniden doğrulandı."
+				"Sonuç çarpıcı: başarıda öz disiplin, IQ'dan iki kat daha önemli. Öz disiplini yüksek öğrenciler her ölçütte (notlar, sınav puanları, devam, ödeve başlama saati, TV izleme süresi) akranlarını geçti. 2021'de aynı bulgu 589 öğrencide 6-7. sınıflar için yeniden doğrulandı."
 		},
 		{
 			text:
@@ -105,7 +105,7 @@
 	const arg6 = [
 		{
 			text:
-				"Prefrontal cortex — beynin 'yönetici' bölgesi — yaklaşık 11 yaşında yeniden yapılanma sürecine girer. Synaptic pruning (gereksiz bağlantıların temizlenmesi) ve myelination (var olan bağlantıların güçlenmesi) eşzamanlı olarak işler. Süreç 25'lere kadar sürer ama en plastik dönem 11–14 yaşıdır."
+				"Prefrontal cortex — beynin 'yönetici' bölgesi — yaklaşık 11 yaşında yeniden yapılanma sürecine girer. Synaptic pruning (gereksiz bağlantıların temizlenmesi) ve myelination (var olan bağlantıların güçlenmesi) eşzamanlı olarak işler. Süreç 25'lere kadar sürer ama beyin en çok 11–14 yaşında şekillenmeye açıktır."
 		},
 		{
 			text:
@@ -113,7 +113,7 @@
 		},
 		{
 			text:
-				"Chentik'in 5-8. sınıf odağı bu pencereye denk gelir. Hedef LGS puanı değil — LGS sadece sonuç. Asıl kazanım: bir öğrencinin hatadan kaçmayan, hatasını biriktiren, düzenli tekrar eden bir çalışma kasını yaşam boyu taşıması.",
+				"Chentik'in 5-8. sınıf odağı bu döneme denk gelir. Hedef LGS puanı değil — LGS sadece sonuç. Asıl kazanım: hatadan kaçmayan, hatasını biriktiren, düzenli tekrar eden bir çalışma alışkanlığını yaşam boyu taşımak.",
 			emphasis: true
 		}
 	];
@@ -197,7 +197,7 @@
 </BArgument>
 
 {#snippet arg4H2()}
-	Öz disiplin, akademik başarıyı<br />IQ'dan <span class="accent">iki kat güçlü</span> yordar.
+	Başarıda öz disiplin, <span class="accent">IQ'dan iki kat önemli.</span>
 {/snippet}
 <BArgument
 	index={4}
@@ -224,7 +224,7 @@
 </BArgument>
 
 {#snippet arg6H2()}
-	11–14 yaş: alışkanlık kasının <span class="accent">şekillendiği pencere.</span>
+	11–14 yaş: alışkanlık edinmek için <span class="accent">altın dönem.</span>
 {/snippet}
 <BArgument
 	index={6}
