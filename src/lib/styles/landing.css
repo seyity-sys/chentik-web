@@ -1247,11 +1247,38 @@ a {
 	padding-right: 28px;
 	color: var(--ink);
 }
+.modal-app-icon {
+	display: block;
+	margin: 8px auto 14px;
+	border-radius: 18px;
+	box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.16);
+}
+.modal-app-name {
+	font-size: 21px;
+	font-weight: 500;
+	letter-spacing: -0.015em;
+	text-align: center;
+	margin: 0;
+	color: var(--ink);
+}
+.modal-beta-badge {
+	display: flex;
+	width: fit-content;
+	align-items: center;
+	background: var(--accent-soft);
+	color: var(--accent);
+	font-size: 12px;
+	font-weight: 500;
+	padding: 4px 12px;
+	border-radius: 999px;
+	margin: 8px auto 16px;
+}
 .modal-text {
 	font-size: 14.5px;
 	color: var(--ink-2);
 	line-height: 1.55;
 	margin: 0 0 18px;
+	text-align: center;
 }
 .modal-email {
 	display: inline-flex;

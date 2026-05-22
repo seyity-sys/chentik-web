@@ -54,10 +54,18 @@
 					<path d="M6 6 L18 18 M6 18 L18 6" />
 				</svg>
 			</button>
-			<h3 id="modal-title" class="modal-title">Chentik'i indir</h3>
+			<img
+				src="/app-icon.png"
+				alt="Chentik uygulama ikonu"
+				width="76"
+				height="76"
+				class="modal-app-icon"
+			/>
+			<h3 id="modal-title" class="modal-app-name">Chentik</h3>
+			<span class="modal-beta-badge">Beta sürüm</span>
 
 			<p class="modal-text">
-				Chentik şu an beta sürümde. iOS'ta TestFlight üzerinden ücretsiz deneyebilirsin.
+				iOS'ta TestFlight üzerinden ücretsiz deneyebilirsin.
 			</p>
 
 			<div class="modal-stores">
