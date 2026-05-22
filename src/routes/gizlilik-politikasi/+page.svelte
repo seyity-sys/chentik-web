@@ -15,6 +15,10 @@
 		content="Verinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında ayrıntılı bilgi."
 	/>
 	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:alt" content="Chentik" />
 	<meta property="og:url" content="https://www.chentik.app/gizlilik-politikasi" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary" />

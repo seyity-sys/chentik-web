@@ -5,4 +5,9 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	<meta name="theme-color" content="#fbfbf9" />
+</svelte:head>
+
 {@render children()}

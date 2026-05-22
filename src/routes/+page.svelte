@@ -32,6 +32,10 @@
 		content="LGS hazırlığı için yanlış defteri + aralıklı tekrar. AI ders ve konuyu tespit eder, sistem 1-3-7-21 gün aralığıyla hatırlatır."
 	/>
 	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:alt" content="Chentik" />
 	<meta property="og:url" content="https://www.chentik.app" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
