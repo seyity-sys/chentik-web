@@ -13,9 +13,9 @@
 			alt: 'Veli sınav ekranı'
 		},
 		{
-			image: '/web-images/v-yanlislar.png',
+			image: '/web-images/v-altkonu.png',
 			caption: 'Zayıf konular',
-			alt: 'Veli yanlışlar ekranı'
+			alt: 'Veli istatistik ekranı — konu bazında yanlış dağılımı'
 		}
 	];
 </script>
