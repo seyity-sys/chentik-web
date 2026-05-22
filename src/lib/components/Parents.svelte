@@ -2,16 +2,20 @@
 	import PhoneMockup from './PhoneMockup.svelte';
 
 	const phones = [
-		{ image: '/web-images/shot-veli-home.png', caption: 'Veli anasayfa', alt: 'Veli profil ekranı' },
 		{
-			image: '/web-images/shot-veli-izin.png',
-			caption: 'İzin yönetimi',
-			alt: 'Bağlantı izin yönetimi bottom sheet'
+			image: '/web-images/v-istatistik.png',
+			caption: 'Sınav trendi',
+			alt: 'Veli istatistik ekranı'
 		},
 		{
-			image: '/web-images/shot-veli-cocuk.png',
-			caption: 'Çocuk profili',
-			alt: 'Çocuk profilinde Velilerim listesi'
+			image: '/web-images/v-sinav.png',
+			caption: 'Sınav takibi',
+			alt: 'Veli sınav ekranı'
+		},
+		{
+			image: '/web-images/v-yanlislar.png',
+			caption: 'Zayıf konular',
+			alt: 'Veli yanlışlar ekranı'
 		}
 	];
 </script>
@@ -40,14 +44,14 @@
 						stroke-linecap="round"
 						stroke-linejoin="round"
 					>
-						<path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1" />
-						<path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1" />
+						<polyline points="3 17 9 11 13 15 21 7" />
+						<polyline points="14 7 21 7 21 14" />
 					</svg>
 				</div>
-				<h3 class="parents-feature-title">İzin temelli bağlantı</h3>
+				<h3 class="parents-feature-title">Sınav trendi, tek bakışta.</h3>
 				<p class="parents-feature-body">
-					Davet kodu ile bağlanırsınız. KVKK uyumlu, her iki taraf da istediği zaman bağlantıyı
-					kaldırabilir.
+					Son puan, ders dağılımı, zaman çizelgesi. Çocuğunuzun nereden nereye geldiğini bir
+					bakışta görürsünüz.
 				</p>
 			</div>
 
@@ -63,14 +67,18 @@
 						stroke-linecap="round"
 						stroke-linejoin="round"
 					>
-						<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
-						<circle cx="12" cy="12" r="3" />
+						<line x1="9" y1="6" x2="21" y2="6" />
+						<line x1="9" y1="12" x2="21" y2="12" />
+						<line x1="9" y1="18" x2="21" y2="18" />
+						<circle cx="4" cy="6" r="1.5" />
+						<circle cx="4" cy="12" r="1.5" />
+						<circle cx="4" cy="18" r="1.5" />
 					</svg>
 				</div>
-				<h3 class="parents-feature-title">Çocuk neyi paylaşacağına karar verir</h3>
+				<h3 class="parents-feature-title">Düz ve dürüst sınav takibi.</h3>
 				<p class="parents-feature-body">
-					Çocuk 'Yanlışlarımı görebilir' toggle'ını kapatabilir. Veli sadece çocuğun izin verdiği
-					kadarını görür.
+					Hangi denemeden kaç puan aldı, bir önceki sınava göre fark ne. Yorum yok, sadece zaman
+					çizelgesi.
 				</p>
 			</div>
 
@@ -86,16 +94,15 @@
 						stroke-linecap="round"
 						stroke-linejoin="round"
 					>
-						<circle cx="7" cy="8" r="3" />
-						<circle cx="17" cy="8" r="3" />
-						<path d="M2.5 20c0-2.8 2.2-5 4.5-5s4.5 2.2 4.5 5" />
-						<path d="M12.5 20c0-2.8 2.2-5 4.5-5s4.5 2.2 4.5 5" />
+						<circle cx="12" cy="12" r="10" />
+						<circle cx="12" cy="12" r="6" />
+						<circle cx="12" cy="12" r="2" />
 					</svg>
 				</div>
-				<h3 class="parents-feature-title">Birden fazla çocuk</h3>
+				<h3 class="parents-feature-title">Zorlandığı konuları görürsünüz.</h3>
 				<p class="parents-feature-body">
-					Birden fazla çocuğu olan veliler tek hesaptan yönetir. Her çocuk için ayrı izin, ayrı
-					bağlantı.
+					Hangi derste yığılma var, hangi konuda zorlanıyor — çocuğunuz paylaştığında. Karar onun,
+					sohbet sizin.
 				</p>
 			</div>
 		</div>
@@ -108,5 +115,32 @@
 				</div>
 			{/each}
 		</div>
+
+		<div class="parents-more">
+			<a href="/veliler" class="parents-more-link">
+				Veli paneli detayları için: Veliler için
+				<span aria-hidden="true" style="margin-left: 4px;">→</span>
+			</a>
+		</div>
 	</div>
 </section>
+
+<style>
+	.parents-more {
+		display: flex;
+		justify-content: center;
+		margin-top: 28px;
+	}
+	.parents-more-link {
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--accent);
+		text-decoration: none;
+		transition: color 0.15s ease;
+	}
+	.parents-more-link:hover {
+		color: var(--accent-2);
+	}
+</style>
