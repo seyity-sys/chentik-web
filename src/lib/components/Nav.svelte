@@ -93,19 +93,33 @@
 			aria-hidden="true"
 		></div>
 		<div class="nav-mobile-drawer" role="dialog" aria-label="Mobil menü">
-			<a href={isHome ? '#nasil' : '/#nasil'} onclick={handleNavClick}>Nasıl çalışır</a>
-			<a
-				href="/bilim"
-				class:is-active={activePage === 'bilim'}
-				aria-current={activePage === 'bilim' ? 'page' : undefined}
-				onclick={handleNavClick}>Bilim</a
-			>
-			<a
-				href="/veliler"
-				class:is-active={activePage === 'veliler'}
-				aria-current={activePage === 'veliler' ? 'page' : undefined}
-				onclick={handleNavClick}>Veliler için</a
-			>
+			<div class="nav-mobile-header">
+				<span class="brand">
+					<ChentikLogo size={32} variant="warm" />
+					<span>Chentik</span>
+				</span>
+				<button type="button" class="nav-mobile-close" onclick={closeMobile} aria-label="Menüyü kapat">
+					<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+						<line x1="18" y1="6" x2="6" y2="18" />
+						<line x1="6" y1="6" x2="18" y2="18" />
+					</svg>
+				</button>
+			</div>
+			<div class="nav-mobile-links">
+				<a href={isHome ? '#nasil' : '/#nasil'} onclick={handleNavClick}>Nasıl çalışır</a>
+				<a
+					href="/bilim"
+					class:is-active={activePage === 'bilim'}
+					aria-current={activePage === 'bilim' ? 'page' : undefined}
+					onclick={handleNavClick}>Bilim</a
+				>
+				<a
+					href="/veliler"
+					class:is-active={activePage === 'veliler'}
+					aria-current={activePage === 'veliler' ? 'page' : undefined}
+					onclick={handleNavClick}>Veliler için</a
+				>
+			</div>
 			<button
 				type="button"
 				class="nav-cta-mobile"
