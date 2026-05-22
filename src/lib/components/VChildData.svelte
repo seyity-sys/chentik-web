@@ -17,10 +17,10 @@
 		},
 		{
 			caption: 'Yanlışlar',
-			image: '/web-images/v-yanlislar.png',
-			alt: 'Yanlışlar ekranı',
+			image: '/web-images/v-altkonu.png',
+			alt: 'Veli istatistik ekranı — konu bazında yanlış dağılımı',
 			body:
-				'Ders bazında dağılım, hangi konularda yığılma var. Karara çocuk varır — siz sohbeti açarsınız.'
+				'Ders ve konu bazında dağılım, hangi alt konularda yığılma var. Karara çocuk varır — siz sohbeti açarsınız.'
 		}
 	];
 </script>
