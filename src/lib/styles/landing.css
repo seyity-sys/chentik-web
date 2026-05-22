@@ -258,7 +258,7 @@ a {
 }
 
 .h2 {
-	font-size: clamp(32px, 4.6vw, 48px);
+	font-size: clamp(26px, 4.6vw, 48px);
 	line-height: 1.05;
 	letter-spacing: -0.025em;
 	font-weight: 600;
@@ -552,8 +552,8 @@ a {
 	}
 }
 .hero-h1 {
-	font-size: clamp(40px, 7vw, 76px);
-	line-height: 1.02;
+	font-size: clamp(32px, 7vw, 76px);
+	line-height: 1.05;
 	letter-spacing: -0.035em;
 	font-weight: 600;
 	color: var(--ink);
