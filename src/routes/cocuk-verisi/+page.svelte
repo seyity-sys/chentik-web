@@ -14,8 +14,10 @@
 		property="og:description"
 		content="13 yaşından küçük kullanıcılar için özel düzenlemeler, veli onayı süreci ve veri minimizasyonu."
 	/>
-	<meta property="og:url" content="https://chentik.app/cocuk-verisi" />
+	<meta property="og:image" content="https://www.chentik.app/app-icon.png" />
+	<meta property="og:url" content="https://www.chentik.app/cocuk-verisi" />
 	<meta property="og:type" content="article" />
+	<meta name="twitter:card" content="summary" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 
