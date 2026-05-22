@@ -31,10 +31,10 @@
 		property="og:description"
 		content="LGS hazırlığı için yanlış defteri + aralıklı tekrar. AI ders ve konuyu tespit eder, sistem 1-3-7-21 gün aralığıyla hatırlatır."
 	/>
-	<meta property="og:image" content="https://www.chentik.app/web-images/shot-home.png" />
+	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
 	<meta property="og:url" content="https://www.chentik.app" />
 	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:card" content="summary" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 

@@ -14,7 +14,7 @@
 		property="og:description"
 		content="Verinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında ayrıntılı bilgi."
 	/>
-	<meta property="og:image" content="https://www.chentik.app/app-icon.png" />
+	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
 	<meta property="og:url" content="https://www.chentik.app/gizlilik-politikasi" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary" />

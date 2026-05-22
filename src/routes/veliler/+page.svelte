@@ -28,10 +28,10 @@
 	/>
 	<meta property="og:title" content="Veliler için — Chentik" />
 	<meta property="og:description" content="Çocuğunuzun çalışmasını ve sınavlarını izleyin, kararı ona bırakın." />
-	<meta property="og:image" content="https://www.chentik.app/web-images/v-bugun.png" />
+	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
 	<meta property="og:url" content="https://www.chentik.app/veliler" />
 	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:card" content="summary" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 
