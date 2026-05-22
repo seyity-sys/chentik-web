@@ -250,5 +250,32 @@
 				<div class="sci-cite">WEF 2023 · OECD Education 2030 · Bloom et al., Stanford 2024</div>
 			</article>
 		</div>
+
+		<div class="bilim-more">
+			<a href="/bilim" class="bilim-more-link">
+				Tüm yedi bilimsel temel için: Bilim
+				<span aria-hidden="true" style="margin-left: 4px;">→</span>
+			</a>
+		</div>
 	</div>
 </section>
+
+<style>
+	.bilim-more {
+		display: flex;
+		justify-content: center;
+		margin-top: 28px;
+	}
+	.bilim-more-link {
+		display: inline-flex;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--accent);
+		text-decoration: none;
+		transition: color 0.15s ease;
+	}
+	.bilim-more-link:hover {
+		color: var(--accent-2);
+	}
+</style>
