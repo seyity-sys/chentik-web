@@ -10,7 +10,7 @@
 			<div>
 				<div class="eyebrow">
 					<span class="dot"></span>
-					5–8. sınıf · LGS ve okul yazılıları
+					5–8. sınıf · LGS'ye giden yol
 				</div>
 				<h1 class="hero-h1">
 					Her hata bir <span class="accent">çentik</span>.<br />
