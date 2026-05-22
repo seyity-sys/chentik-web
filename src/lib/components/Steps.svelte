@@ -6,8 +6,8 @@
 			num: '01',
 			title: 'Foto çek',
 			body: 'Yanlış yaptığın soruyu telefonla çek. Hepsi bu — elle yazmak, deftere geçirmek yok.',
-			image: '/web-images/shot-capture.png',
-			alt: 'Soru çekme ekranı'
+			image: '/web-images/shot-yeniyanlis.png',
+			alt: 'Yeni yanlış ekleme — foto kaynağı seçimi'
 		},
 		{
 			num: '02',
