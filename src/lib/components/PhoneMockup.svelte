@@ -1,9 +1,12 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+
 	let {
 		image,
 		alt = '',
-		width
-	}: { image: string; alt?: string; width?: number } = $props();
+		width,
+		children
+	}: { image?: string; alt?: string; width?: number; children?: Snippet } = $props();
 </script>
 
 <div
@@ -13,6 +16,10 @@
 	aria-label={alt}
 >
 	<div class="phone-screen">
-		<img src={image} {alt} class="phone-img" />
+		{#if children}
+			{@render children()}
+		{:else if image}
+			<img src={image} {alt} class="phone-img" />
+		{/if}
 	</div>
 </div>
