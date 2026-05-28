@@ -152,6 +152,7 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="Chentik" />
 	<meta property="og:url" content="https://www.chentik.app/bilim" />
+	<link rel="canonical" href="https://www.chentik.app/bilim" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />

@@ -24,12 +24,12 @@
 	<title>Chentik — Her hata bir çentik. Her çentik bir adım.</title>
 	<meta
 		name="description"
-		content="Yanlış defteri ve aralıklı tekrar sistemi ile LGS hazırlığı. 5-8. sınıf öğrencileri için. Reklamsız, çocuk güvenli, ücretsiz."
+		content="Yanlış defteri ve aralıklı tekrar sistemiyle LGS ve YKS hazırlığı. Ortaokuldan üniversiteye. Reklamsız, çocuk güvenli, ücretsiz."
 	/>
 	<meta property="og:title" content="Chentik — Her hata bir çentik. Her çentik bir adım." />
 	<meta
 		property="og:description"
-		content="LGS hazırlığı için yanlış defteri + aralıklı tekrar. AI ders ve konuyu tespit eder, sistem 1-3-7-21 gün aralığıyla hatırlatır."
+		content="Yanlış defteri ve aralıklı tekrar sistemiyle LGS ve YKS hazırlığı. Ortaokuldan üniversiteye. Reklamsız, çocuk güvenli, ücretsiz."
 	/>
 	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
 	<meta property="og:image:width" content="1024" />
@@ -37,6 +37,7 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:alt" content="Chentik" />
 	<meta property="og:url" content="https://www.chentik.app" />
+	<link rel="canonical" href="https://www.chentik.app" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
