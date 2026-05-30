@@ -1,8 +1,12 @@
 # DEVIR-TESLIM — chentik-web (pazarlama sitesi)
 
-## ŞU AN (2026-05-28)
+## ŞU AN (2026-05-30)
 
-**Son tamamlanan sprint: Web-SEO-A — Pazarlama SEO hijyeni** ✅ canlıda
+**Son tamamlanan sprint: iOS-İndirme-ÇokYakında** ✅ canlıda
+
+İndirme modal'ında (`DownloadModal.svelte` — `/`, `/bilim`, `/veliler` tek kaynak) iOS TestFlight butonu kaldırıldı → **"App Store — çok yakında"** (devre dışı `<span>`, Android'le birebir aynı pattern; Apple logosu kaldı). TestFlight notu ("Önce App Store'dan TestFlight…") + link kaldırıldı; modal metni nötrlendi ("Chentik çok yakında iOS ve Android'de. Lansman için hazırlanıyoruz."). Android butonu DOKUNULMADI (zaten "çok yakında"). Commit `b5df99e` → push → `npm run build` + `npx wrangler deploy` (Version `c55ea38f`). Canlı doğrulandı: www.chentik.app HTTP 200, yeni asset hash'leri (`app.6O6GVdNV.js` / `start.O8-HQ2UW.js`) sunuluyor, src'de TestFlight referansı SIFIR. (Risk: lgs-takip app bundle ETKİLENMEDİ — ayrı repo/Worker.)
+
+**Önceki sprint: Web-SEO-A — Pazarlama SEO hijyeni** ✅ canlıda
 
 Yapılanlar (commit `ad98cbf`):
 - **Self-canonical** (www, absolute, og:url ile birebir) → 6 indekslenen sayfa:
