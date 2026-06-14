@@ -321,7 +321,7 @@ export const GIZ: LegalPage = {
 				UL([
 					'LGS deneme sonuçları (D/Y/B, tarih, sınav adı)',
 					'Yanlış soru listesi ve fotoğrafları',
-					'Hata türleri (dikkatsizlik, bilgi eksiği, soru anlaşılmadı)',
+					'Hata türleri (dikkatsizlik, bilgi eksiği, yorum hatası, zaman yetmedi, soru anlaşılmadı)',
 					'Konu ve ders istatistikleri',
 					'Tekrar performansı (üst üste doğru cevap sayıları)'
 				]),
@@ -334,7 +334,7 @@ export const GIZ: LegalPage = {
 					'Kullanım log kayıtları'
 				]),
 				SH('3.4 Veli-Öğrenci İlişki Verileri'),
-				UL(['Davet kodu ve bağlantı tarihi', 'Karşılıklı izin durumu']),
+				UL(['Kurulum kodu ve bağlantı tarihi', 'Karşılıklı izin durumu']),
 				SH('3.5 TOPLANMAYAN Veriler'),
 				CO(
 					'blue',
@@ -366,6 +366,7 @@ export const GIZ: LegalPage = {
 					'Şifreleme: TLS 1.3 (tüm trafik)',
 					'Şifre koruması: bcrypt (geri çevrilemez)',
 					'Veritabanı: Supabase Row Level Security (RLS)',
+					'Fotoğraflar: özel (private) depolama + kısa ömürlü imzalı (signed) URL — herkese açık bağlantı yok',
 					'Yedekleme: Otomatik günlük, şifreli depolama',
 					'Erişim: Sunucu 2FA ile korunur'
 				]),
