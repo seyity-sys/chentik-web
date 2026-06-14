@@ -37,7 +37,7 @@
 					<div class="pdf-feature-body">
 						<h3 class="pdf-feature-title">Seçmeli içerik</h3>
 						<p class="pdf-feature-text">
-							'Tekrar zamanı' ve 'Aktif' filtrelerinden istediğin yanlışları seçerek özelleştir.
+							İstediğin yanlışları tek tek seçip PDF'e ekle; derse göre süzebilirsin.
 						</p>
 					</div>
 				</div>
@@ -62,8 +62,8 @@
 					<div class="pdf-feature-body">
 						<h3 class="pdf-feature-title">Profesyonel format</h3>
 						<p class="pdf-feature-text">
-							Numaralı, başlıklı, fotoğrafı birleştirilmiş. Şıklar boş daire — kalemle
-							işaretleyebilirsin.
+							İki sütun, numaralı, başlıklı; fotoğraf birleştirilmiş. Şık metinleri yazılı,
+							işaretleme için boş daire — cevap anahtarı yok.
 						</p>
 					</div>
 				</div>
@@ -97,7 +97,7 @@
 			<div class="pdf-mockups">
 				<div class="pdf-mockup-item">
 					<PhoneMockup
-						image="/web-images/shot-pdf-select.png"
+						image="/screenshots/07-pdf-select.png"
 						alt="PDF oluştur ekranı"
 						width={210}
 					/>
@@ -105,7 +105,7 @@
 				</div>
 				<div class="pdf-mockup-item">
 					<div class="pdf-paper" role="img" aria-label="Çıkarılan PDF önizlemesi">
-						<img src="/web-images/shot-pdf-paper.png" alt="Matematik Yanlış Defteri PDF önizlemesi" />
+						<img src="/screenshots/08-pdf-paper.png" alt="Matematik Yanlış Defteri PDF önizlemesi" />
 					</div>
 					<div class="pdf-mockup-caption">2. Yazdır, çalış</div>
 				</div>

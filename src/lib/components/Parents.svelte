@@ -3,17 +3,17 @@
 
 	const phones = [
 		{
-			image: '/web-images/v-istatistik.png',
+			image: '/screenshots/v-istatistik.png',
 			caption: 'Sınav trendi',
 			alt: 'Veli istatistik ekranı'
 		},
 		{
-			image: '/web-images/v-sinav.png',
+			image: '/screenshots/v-sinav.png',
 			caption: 'Sınav takibi',
 			alt: 'Veli sınav ekranı'
 		},
 		{
-			image: '/web-images/v-altkonu.png',
+			image: '/screenshots/v-yanlislar.png',
 			caption: 'Zayıf konular',
 			alt: 'Veli istatistik ekranı — konu bazında yanlış dağılımı'
 		}

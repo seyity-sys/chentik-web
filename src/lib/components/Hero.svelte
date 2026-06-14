@@ -80,7 +80,7 @@
 					<span class="yks-badge-tag">Yeni</span>
 					<span class="yks-badge-label">Artık YKS için de hazır</span>
 				</div>
-				<PhoneMockup image="/web-images/shot-home.png" alt="Anasayfa ekranı" />
+				<PhoneMockup image="/screenshots/00-home.png" alt="Anasayfa ekranı" />
 			</div>
 		</div>
 	</div>

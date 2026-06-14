@@ -4,29 +4,29 @@
 	const steps = [
 		{
 			num: '01',
-			title: 'Foto çek',
-			body: 'Yanlış yaptığın soruyu telefonla çek. Hepsi bu — elle yazmak, deftere geçirmek yok.',
-			image: '/web-images/shot-yeniyanlis.png',
-			alt: 'Yeni yanlış ekleme — foto kaynağı seçimi'
+			title: 'Foto çek & kırp',
+			body: 'Yanlış yaptığın soruyu telefonla çek, kırp. Gerekirse şekli/grafiği ayrıca kırparsın. Elle yazmak, deftere geçirmek yok.',
+			image: '/screenshots/01-capture.png',
+			alt: 'Soru çekme ve kırpma ekranı'
 		},
 		{
 			num: '02',
 			title: 'AI analiz eder',
-			body: 'Claude Vision dersi, konuyu ve hata türünü saniyeler içinde bulur. İstersen düzeltirsin — son söz senin.',
-			image: '/web-images/shot-analyze.png',
+			body: 'Claude Vision; dersi, konuyu ve 5 hata türünden birini saniyeler içinde bulur — Dikkatsizlik, Bilgi Eksiği, Yorum Hatası, Zaman Yetmedi, Soru Anlaşılmadı. İstersen düzeltirsin, son söz senin.',
+			image: '/screenshots/02-analyze.png',
 			alt: 'AI analiz ekranı'
 		},
 		{
 			num: '03',
 			title: 'Aralıklı tekrar',
-			body: 'Sistem aynı yanlışı 1, 3, 7 ve 21 gün sonra sana hatırlatır. Dört tekrarın sonunda o konu pekişir, tekrar listenden çıkar ama arşivinde kalır.',
-			image: '/web-images/shot-repeat.png',
+			body: 'Aynı yanlış 1, 3, 7 ve 21 gün sonra karşına çıkar. Üst üste 4 doğru cevaplarsan defterden çıkar (yanlışta sayaç sıfırlanır) — arşivinde kalır.',
+			image: '/screenshots/03-repeat.png',
 			alt: 'Aralıklı tekrar ekranı'
 		},
 		{
 			num: '04',
 			title: 'Bildirimle hatırlat',
-			body: "Sabah 9'da bugünkü tekrarlar, akşam 8'de unutmadan son hatırlatma. Telefonu açmayı sen unutsan bile, Chentik unutmaz.",
+			body: "Sabah 9'da bugünkü tekrarlar, akşam 8'de unutmadan son hatırlatma (iOS uygulamasında). Telefonu açmayı sen unutsan bile, Chentik unutmaz.",
 			lock: true,
 			alt: 'Kilit ekranında Chentik tekrar bildirimi'
 		}
@@ -38,7 +38,7 @@
 		<div class="section-head">
 			<div class="eyebrow"><span class="dot"></span>Nasıl çalışır</div>
 			<h2 class="h2">
-				Üç adım. Tek değer önerisi:<br />
+				Dört adım. Tek değer önerisi:<br />
 				<span style="color:var(--ink-2);">"Unuttuğum yanlış kalmasın."</span>
 			</h2>
 		</div>

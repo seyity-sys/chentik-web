@@ -147,7 +147,7 @@
 
 	--rad: 12px;
 	--rad-sm: 8px;
-	--rad-lg: 20px;
+	--rad-lg: 16px; /* app source-of-truth hizası (A2) */
 	--rad-xl: 28px;
 	--rad-phone: 44px;
 
