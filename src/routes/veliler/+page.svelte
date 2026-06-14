@@ -37,6 +37,9 @@
 	<link rel="canonical" href="https://www.chentik.app/veliler" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Veliler için — Chentik" />
+	<meta name="twitter:description" content="Çocuğunuzun çalışmasını ve sınavlarını izleyin, kararı ona bırakın." />
+	<meta name="twitter:image" content="https://www.chentik.app/og-image.png" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 

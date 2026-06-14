@@ -23,6 +23,9 @@
 	<link rel="canonical" href="https://www.chentik.app/cocuk-verisi" />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Çocuk Verisi Koruması — Chentik" />
+	<meta name="twitter:description" content="13 yaşından küçük kullanıcılar için özel düzenlemeler, veli onayı süreci ve veri minimizasyonu." />
+	<meta name="twitter:image" content="https://www.chentik.app/og-image.png" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 

@@ -40,6 +40,9 @@
 	<link rel="canonical" href="https://www.chentik.app" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Chentik — Her hata bir çentik. Her çentik bir adım." />
+	<meta name="twitter:description" content="Yanlış defteri ve aralıklı tekrar sistemiyle LGS ve YKS hazırlığı. Ortaokuldan üniversiteye. Reklamsız, çocuk güvenli, ücretsiz." />
+	<meta name="twitter:image" content="https://www.chentik.app/og-image.png" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 

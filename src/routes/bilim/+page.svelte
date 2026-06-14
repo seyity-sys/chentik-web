@@ -155,6 +155,9 @@
 	<link rel="canonical" href="https://www.chentik.app/bilim" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Bilim — Chentik" />
+	<meta name="twitter:description" content="Pazarlama vaadi yok. 7 bilimsel temel + 11 akademik kaynak." />
+	<meta name="twitter:image" content="https://www.chentik.app/og-image.png" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 

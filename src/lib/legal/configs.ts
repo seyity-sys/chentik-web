@@ -72,7 +72,7 @@ export const KVKK: LegalPage = {
 					'Statü: Gerçek kişi (şahıs)',
 					'Adres: İstanbul, Türkiye',
 					'E-posta: merhaba@chentik.app',
-					'Web Sitesi: https://chentik.app',
+					'Web Sitesi: https://www.chentik.app',
 					'Uygulama: Chentik (eski adıyla LGS-Takip)'
 				])
 			]
@@ -282,7 +282,7 @@ export const GIZ: LegalPage = {
 			h: 'Giriş',
 			body: [
 				P(
-					'Chentik ("biz", "uygulama", "platform") gizliliğinize saygı duyar. Bu Gizlilik Politikası, Chentik mobil uygulamasını ve chentik.app web sitesini kullanırken verilerinizin nasıl işlendiğini açıklar.'
+					'Chentik ("biz", "uygulama", "platform") gizliliğinize saygı duyar. Bu Gizlilik Politikası, Chentik mobil uygulamasını ve www.chentik.app web sitesini kullanırken verilerinizin nasıl işlendiğini açıklar.'
 				),
 				P(
 					'Bu politika 6698 sayılı KVKK, Apple App Store Privacy gereksinimleri ve Google Play Data Safety standartları çerçevesinde hazırlanmıştır.'
@@ -299,7 +299,7 @@ export const GIZ: LegalPage = {
 					'Statü: Gerçek kişi (şahıs)',
 					'Konum: İstanbul, Türkiye',
 					'E-posta: merhaba@chentik.app',
-					'Web: https://chentik.app'
+					'Web: https://www.chentik.app'
 				])
 			]
 		},
@@ -485,7 +485,7 @@ export const GIZ: LegalPage = {
 				UL([
 					'Veri Sorumlusu: Seyit YILMAZ',
 					'E-posta: merhaba@chentik.app',
-					'Web: https://chentik.app',
+					'Web: https://www.chentik.app',
 					'KVKK şikayeti: kvkk.gov.tr'
 				])
 			]
