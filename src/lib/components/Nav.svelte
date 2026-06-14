@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChentikLogo from './ChentikLogo.svelte';
 
-	type Page = 'home' | 'veliler' | 'bilim' | 'legal';
+	type Page = 'home' | 'veliler' | 'bilim' | 'legal' | 'iletisim';
 
 	let {
 		onDownload,
