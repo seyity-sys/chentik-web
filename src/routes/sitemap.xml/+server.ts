@@ -3,6 +3,7 @@ const PAGES = [
 	'',
 	'/bilim',
 	'/veliler',
+	'/iletisim',
 	'/gizlilik-politikasi',
 	'/kvkk-aydinlatma',
 	'/cocuk-verisi'

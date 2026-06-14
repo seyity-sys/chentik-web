@@ -72,7 +72,7 @@ export const KVKK: LegalPage = {
 					'Statü: Gerçek kişi (şahıs)',
 					'Adres: İstanbul, Türkiye',
 					'E-posta: merhaba@chentik.app',
-					'Web Sitesi: https://chentik.app',
+					'Web Sitesi: https://www.chentik.app',
 					'Uygulama: Chentik (eski adıyla LGS-Takip)'
 				])
 			]
@@ -282,7 +282,7 @@ export const GIZ: LegalPage = {
 			h: 'Giriş',
 			body: [
 				P(
-					'Chentik ("biz", "uygulama", "platform") gizliliğinize saygı duyar. Bu Gizlilik Politikası, Chentik mobil uygulamasını ve chentik.app web sitesini kullanırken verilerinizin nasıl işlendiğini açıklar.'
+					'Chentik ("biz", "uygulama", "platform") gizliliğinize saygı duyar. Bu Gizlilik Politikası, Chentik mobil uygulamasını ve www.chentik.app web sitesini kullanırken verilerinizin nasıl işlendiğini açıklar.'
 				),
 				P(
 					'Bu politika 6698 sayılı KVKK, Apple App Store Privacy gereksinimleri ve Google Play Data Safety standartları çerçevesinde hazırlanmıştır.'
@@ -299,7 +299,7 @@ export const GIZ: LegalPage = {
 					'Statü: Gerçek kişi (şahıs)',
 					'Konum: İstanbul, Türkiye',
 					'E-posta: merhaba@chentik.app',
-					'Web: https://chentik.app'
+					'Web: https://www.chentik.app'
 				])
 			]
 		},
@@ -321,7 +321,7 @@ export const GIZ: LegalPage = {
 				UL([
 					'LGS deneme sonuçları (D/Y/B, tarih, sınav adı)',
 					'Yanlış soru listesi ve fotoğrafları',
-					'Hata türleri (dikkatsizlik, bilgi eksiği, soru anlaşılmadı)',
+					'Hata türleri (dikkatsizlik, bilgi eksiği, yorum hatası, zaman yetmedi, soru anlaşılmadı)',
 					'Konu ve ders istatistikleri',
 					'Tekrar performansı (üst üste doğru cevap sayıları)'
 				]),
@@ -334,7 +334,7 @@ export const GIZ: LegalPage = {
 					'Kullanım log kayıtları'
 				]),
 				SH('3.4 Veli-Öğrenci İlişki Verileri'),
-				UL(['Davet kodu ve bağlantı tarihi', 'Karşılıklı izin durumu']),
+				UL(['Kurulum kodu ve bağlantı tarihi', 'Karşılıklı izin durumu']),
 				SH('3.5 TOPLANMAYAN Veriler'),
 				CO(
 					'blue',
@@ -366,6 +366,7 @@ export const GIZ: LegalPage = {
 					'Şifreleme: TLS 1.3 (tüm trafik)',
 					'Şifre koruması: bcrypt (geri çevrilemez)',
 					'Veritabanı: Supabase Row Level Security (RLS)',
+					'Fotoğraflar: özel (private) depolama + kısa ömürlü imzalı (signed) URL — herkese açık bağlantı yok',
 					'Yedekleme: Otomatik günlük, şifreli depolama',
 					'Erişim: Sunucu 2FA ile korunur'
 				]),
@@ -484,7 +485,7 @@ export const GIZ: LegalPage = {
 				UL([
 					'Veri Sorumlusu: Seyit YILMAZ',
 					'E-posta: merhaba@chentik.app',
-					'Web: https://chentik.app',
+					'Web: https://www.chentik.app',
 					'KVKK şikayeti: kvkk.gov.tr'
 				])
 			]

@@ -1,19 +1,54 @@
+/* ================================================
+   Chentik tasarim token'lari — TEK KAYNAK
+   lgs-takip (app) --color-* sistemi ile birebir (migr38 Tw700 ders).
+   landing.css kisa isimleri (--accent/--ink/--subj-*) bunlara alias eder.
+   ================================================ */
 :root {
-	/* Apple Health palette — chentik app ile tutarlı */
+	/* Primary (sistem mavisi) */
 	--color-primary: #2563eb;
-	--color-text-primary: #1c1917;
-	--color-text-secondary: #57534e;
-	--color-text-tertiary: #a8a29e;
-	--color-background-primary: #fafaf9;
-	--color-background-secondary: #f5f5f4;
-	--color-border: #e7e5e4;
-	--color-border-tertiary: #f5f5f4;
+	--color-primary-hover: #1d4ed8;
+	--color-primary-pressed: #1e40af;
+	--color-primary-50: #eff6ff;
+	--color-primary-100: #dbeafe;
+	--color-primary-200: #bfdbfe;
 
-	/* Ders renkleri (gerekirse) */
-	--color-ders-tr: #d14365;
-	--color-ders-mat: #2e4fcc;
-	--color-ders-fen: #059669;
-	--color-ders-ink: #b45309;
-	--color-ders-din: #0891b2;
-	--color-ders-ing: #7c3aed;
+	/* Ders renkleri — Tw700 (app migr38 ile birebir) */
+	--color-ders-turkce: #be185d;
+	--color-ders-turkce-soft: #fce7ec;
+	--color-ders-matematik: #1d4ed8;
+	--color-ders-matematik-soft: #e0e7ff;
+	--color-ders-fen: #047857;
+	--color-ders-fen-soft: #d1fae5;
+	--color-ders-inkilap: #92400e;
+	--color-ders-inkilap-soft: #fef3c7;
+	--color-ders-din: #0e7490;
+	--color-ders-din-soft: #cffafe;
+	--color-ders-sosyal: #c2410c;
+	--color-ders-sosyal-soft: #fed7aa;
+	--color-ders-yabanci: #6d28d9;
+	--color-ders-yabanci-soft: #ede9fe;
+
+	/* Notr — Slate metin + Stone border (app degerleri) */
+	--color-bg-primary: #ffffff;
+	--color-bg-secondary: #fafaf9;
+	--color-bg-tertiary: #f4f4f2;
+	--color-text-primary: #0f172a;
+	--color-text-secondary: #64748b;
+	--color-text-tertiary: #94a3b8;
+	--color-border: #e7e5e4;
+	--color-border-strong: #d6d3d1;
+
+	/* Semantic */
+	--color-success: #10b981;
+	--color-success-soft: #d1fae5;
+	--color-warning: #f59e0b;
+	--color-warning-soft: #fef3c7;
+	--color-danger: #ef4444;
+	--color-danger-soft: #fee2e2;
+	--color-info: var(--color-primary);
+
+	/* Rol — Veli (YALNIZ veli rolu; ders rengi DEGIL) */
+	--rol-veli: #7c3aed;
+	--rol-veli-soft: rgba(124, 58, 237, 0.12);
+	--rol-veli-pressed: #6d28d9;
 }

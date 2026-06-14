@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '$lib/tokens.css';
 	import '$lib/styles/landing.css';
+	import '$lib/styles/kalip2.css';
 
 	let { children } = $props();
 </script>
