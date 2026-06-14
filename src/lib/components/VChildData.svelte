@@ -4,20 +4,20 @@
 	const screens = [
 		{
 			caption: 'İstatistik',
-			image: '/web-images/v-istatistik.png',
+			image: '/screenshots/v-istatistik.png',
 			alt: 'Çocuk istatistik ekranı',
 			body: 'Sınav trendi, son puan, ders dağılımı. Bütün resim tek bakışta.'
 		},
 		{
 			caption: 'Sınav',
-			image: '/web-images/v-sinav.png',
+			image: '/screenshots/v-sinav.png',
 			alt: 'Sınavlar ekranı',
 			body:
 				'Hangi denemeden kaç puan aldı, bir önceki sınava göre fark ne. Düz ve dürüst zaman çizelgesi.'
 		},
 		{
 			caption: 'Yanlışlar',
-			image: '/web-images/v-altkonu.png',
+			image: '/screenshots/v-yanlislar.png',
 			alt: 'Veli istatistik ekranı — konu bazında yanlış dağılımı',
 			body:
 				'Ders ve konu bazında dağılım, hangi alt konularda yığılma var. Karara çocuk varır — siz sohbeti açarsınız.'

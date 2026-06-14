@@ -3,15 +3,15 @@
 
 	// Sprint 1'de zaten kopyalanmış asset'leri reuse
 	const screens = [
-		{ caption: 'Veli anasayfa', image: '/web-images/shot-veli-home.png', alt: 'Veli profili' },
+		{ caption: 'Veli anasayfa', image: '/screenshots/04-veli-anasayfa.png', alt: 'Veli profili' },
 		{
 			caption: 'İzin yönetimi',
-			image: '/web-images/shot-veli-izin.png',
+			image: '/screenshots/05-veli-izin.png',
 			alt: 'İzin yönetimi bottom sheet'
 		},
 		{
 			caption: 'Çocuk profili',
-			image: '/web-images/shot-veli-cocuk.png',
+			image: '/screenshots/06-veli-cocuk.png',
 			alt: 'Çocuk profili — velilerim listesi'
 		}
 	];

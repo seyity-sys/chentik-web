@@ -1,6 +1,10 @@
 <script lang="ts">
 	const items = [
 		{
+			q: 'Çocuğumu nasıl eklerim?',
+			a: 'Veli hesabınızdan çocuğunuzun profilini siz oluşturursunuz; uygulama tek kullanımlık bir kurulum kodu üretir. Çocuk kendi cihazında bu kodu girip kendi 6 haneli PIN\'ini belirler — sonraki girişlerde yalnızca PIN. Ayrı bir "davet kodu" yoktur; kurulum tamamen sizin elinizdedir.'
+		},
+		{
 			q: 'Çocuğum izin vermezse ne olur?',
 			a: 'Hiçbir şey görmezsiniz. Ana ekranınızda çocuğunuzun adı görünür ama veri bölümleri boş kalır. "Çocuğunuz şu an yanlışlarını paylaşmıyor" mesajı çıkar. Bu çocuğun hakkıdır, baskı yapmayın — paylaşmak istediğinde toggle\'ı kendisi açar.'
 		},
@@ -14,7 +18,7 @@
 		},
 		{
 			q: 'Birden fazla çocuğum var, nasıl yönetirim?',
-			a: 'Tek veli hesabıyla birden fazla çocuk bağlayabilirsiniz. Her çocuk için ayrı davet, ayrı izin. Veli ana ekranınızda çocuklar arası geçiş bir dokunuş — her birinin verisi ayrı görünür, karışmaz.'
+			a: 'Tek veli hesabıyla birden fazla çocuk profili oluşturabilirsiniz. Her çocuk için ayrı kurulum, ayrı izin. Veli ana ekranınızda çocuklar arası geçiş bir dokunuş — her birinin verisi ayrı görünür, karışmaz.'
 		},
 		{
 			q: 'KVKK — çocuk verisi ne kadar güvende?',
@@ -40,7 +44,7 @@
 	<div class="container v-faq-container">
 		<div class="section-head">
 			<div class="eyebrow"><span class="dot"></span>Sıkça sorulanlar</div>
-			<h2 class="h2">Velilerin sorduğu altı soru.</h2>
+			<h2 class="h2">Velilerin sorduğu yedi soru.</h2>
 		</div>
 
 		<div class="v-faq-list">

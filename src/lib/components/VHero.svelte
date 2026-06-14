@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="hero-phone-stage">
-				<PhoneMockup image="/web-images/v-bugun.png" alt="Bugün ekranı (veli görünümü)" />
+				<PhoneMockup image="/screenshots/v-bugun.png" alt="Bugün ekranı (veli görünümü)" />
 			</div>
 		</div>
 	</div>
