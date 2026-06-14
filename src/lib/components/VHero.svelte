@@ -36,8 +36,8 @@
 					</button>
 				</div>
 				<div class="hero-meta">
-					<span class="pill"><span class="d" style="background:#f59e0b;"></span>Beta</span>
-					<span class="pill"><span class="d" style="background:#10b981;"></span>Ücretsiz</span>
+					<span class="pill"><span class="d" style="background:var(--warning);"></span>Beta</span>
+					<span class="pill"><span class="d" style="background:var(--success);"></span>Ücretsiz</span>
 					<span class="pill"><span class="d" style="background:var(--accent);"></span>KVKK uyumlu</span>
 					<span class="pill"><span class="d" style="background:var(--accent);"></span>Çocuk verisi korumalı</span>
 				</div>

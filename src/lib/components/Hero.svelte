@@ -65,8 +65,8 @@
 					</a>
 				</div>
 				<div class="hero-meta">
-					<span class="pill"><span class="d" style="background:#f59e0b;"></span>Beta</span>
-					<span class="pill"><span class="d" style="background:#10b981;"></span>Ücretsiz</span>
+					<span class="pill"><span class="d" style="background:var(--warning);"></span>Beta</span>
+					<span class="pill"><span class="d" style="background:var(--success);"></span>Ücretsiz</span>
 					<span class="pill"><span class="d" style="background:var(--accent);"></span>KVKK uyumlu</span>
 					<span class="pill"><span class="d" style="background:var(--accent);"></span>Çocuk verisi korumalı</span>
 				</div>
@@ -140,7 +140,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 12px;
-		background: #ffffff;
+		background: var(--white);
 		border: 1.5px solid rgba(37, 99, 235, 0.38);
 		border-radius: 999px;
 		padding: 12px 22px 12px 18px;
@@ -153,8 +153,8 @@
 	.yks-badge-tag {
 		font-size: 12px;
 		font-weight: 600;
-		color: #ffffff;
-		background: #2563eb;
+		color: var(--white);
+		background: var(--accent);
 		border-radius: 999px;
 		padding: 4px 12px;
 	}

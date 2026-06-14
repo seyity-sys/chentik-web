@@ -129,11 +129,11 @@
 	.lockscreen {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(165deg, #4a63d8 0%, #2e4fcc 55%, #1b2f7a 100%);
+		background: linear-gradient(165deg, var(--accent) 0%, var(--accent-2) 55%, var(--color-primary-pressed) 100%);
 		display: flex;
 		flex-direction: column;
 		padding: 14px 16px 18px;
-		color: #fff;
+		color: var(--white);
 	}
 	.ls-status {
 		display: flex;
@@ -184,7 +184,7 @@
 		width: 30px;
 		height: 30px;
 		border-radius: 7px;
-		background: #fff;
+		background: var(--white);
 		flex: none;
 		overflow: hidden;
 		display: flex;
