@@ -3,6 +3,9 @@ compatibility_date = "2026-05-20"
 compatibility_flags = ["nodejs_compat"]
 main = ".svelte-kit/cloudflare/_worker.js/index.js"
 workers_dev = false
+# Versiyon önizleme URL'leri açık (production workers.dev rotası YOK; yalnız
+# <version>-chentik-web.<subdomain>.workers.dev preview linkleri). Seyit onaylı.
+preview_urls = true
 
 [assets]
 directory = ".svelte-kit/cloudflare"
