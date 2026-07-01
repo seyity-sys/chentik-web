@@ -1,18 +1,23 @@
 <script lang="ts">
 	let { open, onClose }: { open: boolean; onClose: () => void } = $props();
 
-	// Escape key + body scroll lock
+	let modalEl: HTMLDivElement | undefined = $state();
+
+	// Escape + body scroll lock + odak yönetimi (aç: modala taşı, kapat: geri ver)
 	$effect(() => {
 		if (!open) return;
+		const prevFocus = document.activeElement as HTMLElement | null;
 		const onKey = (e: KeyboardEvent) => {
 			if (e.key === 'Escape') onClose();
 		};
 		document.addEventListener('keydown', onKey);
 		const prev = document.body.style.overflow;
 		document.body.style.overflow = 'hidden';
+		modalEl?.focus();
 		return () => {
 			document.removeEventListener('keydown', onKey);
 			document.body.style.overflow = prev;
+			prevFocus?.focus?.();
 		};
 	});
 
@@ -34,8 +39,12 @@
 	>
 		<div
 			class="modal"
+			bind:this={modalEl}
 			onclick={handleModalClick}
-			onkeydown={(e) => e.stopPropagation()}
+			onkeydown={(e) => {
+				if (e.key === 'Escape') onClose();
+				e.stopPropagation();
+			}}
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-title"

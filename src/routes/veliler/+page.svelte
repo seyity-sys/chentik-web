@@ -90,9 +90,9 @@
 			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-steps">
 					<div class="fr-step"><span class="n">1</span><div class="t">Profili oluştur</div></div>
-					<span class="fr-ar">→</span>
+					<span class="fr-ar" aria-hidden="true">→</span>
 					<div class="fr-step"><span class="n">2</span><div class="t">Kurulum kodu ver</div></div>
-					<span class="fr-ar">→</span>
+					<span class="fr-ar" aria-hidden="true">→</span>
 					<div class="fr-step"><span class="n">3</span><div class="t">Çocuk PIN belirler</div></div>
 				</div>
 			</div>

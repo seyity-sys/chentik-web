@@ -31,6 +31,8 @@
 		mobileOpen = false;
 	}
 
+	let drawerClose: HTMLButtonElement | undefined = $state();
+
 	$effect(() => {
 		if (!mobileOpen) return;
 		const onKey = (e: KeyboardEvent) => {
@@ -39,6 +41,7 @@
 		document.addEventListener('keydown', onKey);
 		const prevOverflow = document.body.style.overflow;
 		document.body.style.overflow = 'hidden';
+		drawerClose?.focus();
 		return () => {
 			document.removeEventListener('keydown', onKey);
 			document.body.style.overflow = prevOverflow;
@@ -98,7 +101,7 @@
 					<ChentikLogo size={32} variant="warm" />
 					<span>Chentik</span>
 				</span>
-				<button type="button" class="nav-mobile-close" onclick={closeMobile} aria-label="Menüyü kapat">
+				<button type="button" class="nav-mobile-close" bind:this={drawerClose} onclick={closeMobile} aria-label="Menüyü kapat">
 					<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
 						<line x1="18" y1="6" x2="6" y2="18" />
 						<line x1="6" y1="6" x2="18" y2="18" />

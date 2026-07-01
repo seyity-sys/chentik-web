@@ -68,7 +68,7 @@
 <main>
 	<div class="container legal-container">
 		<div class="legal-grid">
-			<aside class="legal-toc" aria-label="Yasal belgeler">
+			<aside class="legal-toc" aria-label="İçindekiler">
 				<ol>
 					{#each page.sections as section, i (section.id)}
 						<li><a href="#{section.id}">{i + 1}. {section.h}</a></li>

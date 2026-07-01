@@ -92,6 +92,10 @@ h4,
 p {
 	margin: 0;
 }
+/* sticky nav (64px) altında kalmasın: tüm çapa hedefleri */
+[id] {
+	scroll-margin-top: 84px;
+}
 
 /* ───────── layout ───────── */
 .container {
@@ -658,10 +662,10 @@ p {
 	stroke: url(#tally-journey);
 	stroke-width: 3;
 }
-/* çizim: pathLength=1 ile */
+/* çizim: pathLength=1 ile (saf CSS animasyon — JS gerektirmez) */
 .tick-draw {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1;
+	stroke-dashoffset: 1.02;
 	animation: tick-draw var(--dur-draw) var(--ease) forwards;
 }
 .tick-draw:nth-child(2) {
@@ -681,10 +685,10 @@ p {
 		stroke-dashoffset: 0;
 	}
 }
-/* IO tetiklemeli varyant (final CTA) */
-.reveal .tick-wait {
+/* IO tetiklemeli varyant (final CTA) — yalnız JS varken gizli başlar */
+html.js .reveal .tick-wait {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1;
+	stroke-dashoffset: 1.02;
 	animation: none;
 }
 .reveal.in .tick-wait {
@@ -1507,15 +1511,15 @@ p {
 	font-family: var(--font-mono);
 	font-variant-numeric: tabular-nums;
 }
-/* eğri çizimi — reveal ile mürekkep */
-.draw {
+/* eğri çizimi — reveal ile mürekkep (yalnız JS varken gizli başlar) */
+html.js .draw {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1;
+	stroke-dashoffset: 1.02;
 	transition: stroke-dashoffset 900ms var(--ease) 200ms;
 }
 .reveal.in .draw,
 .in .draw {
-	stroke-dashoffset: 0;
+	stroke-dashoffset: 0 !important;
 }
 .sci-link {
 	display: flex;
@@ -1571,6 +1575,8 @@ p {
 .final {
 	position: relative;
 	text-align: center;
+	/* paper-2 zemininde AA için ikincil metin koyulaştırılır */
+	--ink-2: #556170;
 	margin-block: calc(var(--sp-section) * 0.5);
 	padding: clamp(56px, 9vw, 104px) clamp(20px, 5vw, 64px);
 	background: var(--paper-2);
@@ -1721,6 +1727,8 @@ p {
 	padding: 64px 0 28px;
 	border-top: 1px solid var(--border);
 	margin-top: var(--sp-8);
+	/* paper-2 zemininde AA (≥4.5:1) için ikincil metin koyulaştırılır */
+	--ink-2: #556170;
 }
 .footer-top {
 	display: grid;
@@ -1969,8 +1977,10 @@ p {
 	color: var(--veli);
 }
 
-/* ───────── reveal / motion ───────── */
-.reveal {
+/* ───────── reveal / motion ─────────
+   Gizleme yalnız html.js altında: JS yoksa (app.html cuts-the-mustard
+   sınıfı eklenmez) içerik SSR ile TAM görünür kalır. */
+html.js .reveal {
 	opacity: 0;
 	transform: translateY(14px);
 	transition:
@@ -1978,12 +1988,19 @@ p {
 		transform var(--dur-3) var(--ease);
 	transition-delay: calc(var(--i, 0) * 70ms);
 }
-.reveal--paper {
+html.js .reveal--paper {
 	transform: translateY(16px) rotate(0.4deg);
 }
-.reveal.in {
+html.js .reveal.in {
 	opacity: 1;
 	transform: none;
+}
+@media (scripting: none) {
+	.reveal,
+	.reveal--paper {
+		opacity: 1 !important;
+		transform: none !important;
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1998,8 +2015,8 @@ p {
 		transition-duration: 0.001s !important;
 		transition-delay: 0s !important;
 	}
-	.reveal,
-	.reveal--paper {
+	html.js .reveal,
+	html.js .reveal--paper {
 		opacity: 1;
 		transform: none;
 	}
@@ -2071,7 +2088,7 @@ p {
 }
 .legal-grid {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: minmax(0, 1fr);
 	gap: 0 48px;
 	align-items: start;
 }

@@ -149,7 +149,7 @@
 					<div class="h"><span style="font-size:15px">✦</span> AI ANALİZİ</div>
 					<div class="r">
 						<span class="fr-subj"><span class="d" style="background:var(--tr)"></span>Türkçe</span>
-						<span class="fr-chev">›</span>
+						<span class="fr-chev" aria-hidden="true">›</span>
 						<span class="fr-topic">Yazım Kuralları ve Noktalama</span>
 					</div>
 				</div>
