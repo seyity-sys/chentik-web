@@ -35,7 +35,7 @@
 		<div
 			class="modal"
 			onclick={handleModalClick}
-			onkeydown={handleModalClick}
+			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
 			aria-modal="true"
 			aria-labelledby="modal-title"

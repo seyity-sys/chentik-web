@@ -77,12 +77,21 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<span>© 2026 Chentik · www.chentik.app</span>
+			<span style="display:inline-flex;align-items:center;gap:10px">
+				<svg class="footer-tally" viewBox="0 0 26 14" aria-hidden="true">
+					<line x1="3" y1="2" x2="3" y2="12" />
+					<line x1="9" y1="2" x2="9" y2="12" />
+					<line x1="15" y1="2" x2="15" y2="12" />
+					<line x1="21" y1="2" x2="21" y2="12" />
+					<line class="fx" x1="0" y1="11" x2="24" y2="3" />
+				</svg>
+				© 2026 Chentik · www.chentik.app
+			</span>
 		</div>
 	</div>
 
 	{#if soon}
-		<div class="footer-toast" role="status" aria-live="polite">
+		<div class="toast" role="status" aria-live="polite">
 			Çok yakında App Store ve Google Play'de.
 		</div>
 	{/if}
@@ -95,70 +104,36 @@
 		margin-top: 18px;
 		flex-wrap: wrap;
 	}
-	.store-badge {
-		display: inline-flex;
-		align-items: center;
-		gap: 9px;
-		padding: 8px 12px;
-		border: 1px solid var(--border);
-		border-radius: 12px;
-		background: var(--white);
-		color: var(--ink);
-		cursor: default;
-		transition:
-			border-color 0.15s ease,
-			background 0.15s ease;
-	}
-	.store-badge:hover {
-		background: var(--bg-3);
-	}
-	.store-badge:focus-visible {
-		outline: 2px solid var(--accent);
-		outline-offset: 2px;
-	}
-	.store-badge svg {
-		width: 22px;
-		height: 22px;
-		flex: none;
-		color: var(--ink-2);
-	}
 	.store-badge-text {
 		display: flex;
 		flex-direction: column;
-		line-height: 1.1;
+		line-height: 1.15;
 		text-align: left;
 	}
 	.store-badge-sub {
-		font-size: 10px;
-		color: var(--ink-3);
+		font-family: var(--font-mono);
+		font-size: 9px;
+		font-weight: 500;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--ink-2);
 	}
 	.store-badge-name {
-		font-size: 14px;
-		font-weight: 600;
+		font-size: 13.5px;
+		font-weight: 650;
+		color: var(--ink);
 	}
 	.store-badge-soon {
-		font-size: 10px;
-		font-weight: 600;
-		color: var(--accent);
-		background: var(--accent-soft);
-		border-radius: 999px;
-		padding: 2px 7px;
-		margin-left: 2px;
-	}
-	.footer-toast {
-		position: fixed;
-		left: 50%;
-		bottom: 28px;
-		transform: translateX(-50%);
-		background: var(--ink);
-		color: var(--white);
-		font-size: 14px;
+		font-family: var(--font-mono);
+		font-size: 9.5px;
 		font-weight: 500;
-		padding: 11px 18px;
-		border-radius: 12px;
-		box-shadow: var(--shadow-lg);
-		z-index: 60;
-		max-width: calc(100vw - 32px);
-		text-align: center;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--ink-2);
+		background: var(--paper-2);
+		border: 1px solid var(--border);
+		border-radius: var(--r-pill);
+		padding: 3px 8px;
+		margin-left: 2px;
 	}
 </style>

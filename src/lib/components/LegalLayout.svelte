@@ -67,41 +67,53 @@
 
 <main>
 	<div class="container legal-container">
-		{#if page.intro}
-			<div class="legal-intro">
-				{@render renderBlock(page.intro)}
-			</div>
-		{/if}
-
-		<article class="legal-body">
-			{#each page.sections as section, i (section.id)}
-				<section id={section.id} class="legal-section">
-					<h2 class="legal-h2">
-						<span class="legal-h2-num">{i + 1}</span>
-						{section.h}
-					</h2>
-					{#each section.body as block, j (j)}
-						{@render renderBlock(block)}
+		<div class="legal-grid">
+			<aside class="legal-toc" aria-label="Yasal belgeler">
+				<ol>
+					{#each page.sections as section, i (section.id)}
+						<li><a href="#{section.id}">{i + 1}. {section.h}</a></li>
 					{/each}
-				</section>
-			{/each}
-		</article>
+				</ol>
+			</aside>
 
-		<nav class="legal-nav-strip" aria-label="Yasal belgeler">
-			{#each LEGAL_NAV as item}
-				<a
-					href={item.href}
-					class:is-active={item.key === page.key}
-					aria-current={item.key === page.key ? 'page' : undefined}
-				>
-					{item.label}
-				</a>
-			{/each}
-		</nav>
+			<div>
+				{#if page.intro}
+					<div class="legal-intro">
+						{@render renderBlock(page.intro)}
+					</div>
+				{/if}
 
-		<p class="legal-disclaimer">
-			Bu sayfa bilgilendirme amaçlıdır. Hukuki danışmanlık için KVKK uzmanı bir avukata başvurun.
-		</p>
+				<article class="legal-body">
+					{#each page.sections as section, i (section.id)}
+						<section id={section.id} class="legal-section">
+							<h2 class="legal-h2">
+								<span class="legal-h2-num">{i + 1}</span>
+								{section.h}
+							</h2>
+							{#each section.body as block, j (j)}
+								{@render renderBlock(block)}
+							{/each}
+						</section>
+					{/each}
+				</article>
+
+				<nav class="legal-nav-strip" aria-label="Yasal belgeler">
+					{#each LEGAL_NAV as item}
+						<a
+							href={item.href}
+							class:is-active={item.key === page.key}
+							aria-current={item.key === page.key ? 'page' : undefined}
+						>
+							{item.label}
+						</a>
+					{/each}
+				</nav>
+
+				<p class="legal-disclaimer">
+					Bu sayfa bilgilendirme amaçlıdır. Hukuki danışmanlık için KVKK uzmanı bir avukata başvurun.
+				</p>
+			</div>
+		</div>
 	</div>
 </main>
 
