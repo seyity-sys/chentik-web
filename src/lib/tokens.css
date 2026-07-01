@@ -52,3 +52,69 @@
 	--rol-veli-soft: rgba(124, 58, 237, 0.12);
 	--rol-veli-pressed: #6d28d9;
 }
+
+/* ================================================
+   V3 "Sıcak Defter" tokenları (redesign-v3-fable)
+   Yukarıdaki --color-* değerleri DEĞİŞMEZ; bu blok yalnız EKLER.
+   ================================================ */
+:root {
+	/* Kâğıt yüzeyleri (warm paper katmanları) */
+	--paper: #fdfcfa;
+	--paper-2: #f7f5f1;
+	--paper-card: #ffffff;
+	--paper-line: rgba(28, 25, 23, 0.05); /* defter çizgisi — doku tavanı %5 */
+	--border-warm: #ece8e1;
+	--border-warm-strong: #dcd6cc;
+	--selection: #fbebce;
+
+	/* Marka yolculuğu: amber (yanlış/başlangıç) → mavi (öğrenildi) */
+	--amber: #b45309;
+
+	/* Tipografi — üç ses */
+	--font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+	--font-body: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--font-mono: 'Spline Sans Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+	/* Type scale (fluid, 360→1440) */
+	--t-hero: clamp(2.5rem, 1.55rem + 4.2vw, 4.125rem); /* 40→66 */
+	--t-h1: clamp(2.125rem, 1.5rem + 2.8vw, 3.25rem); /* sayfa h1 34→52 */
+	--t-h2: clamp(1.75rem, 1.35rem + 1.8vw, 2.5rem); /* 28→40 */
+	--t-h3: 1.3125rem; /* 21 */
+	--t-lede: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); /* 17→19 */
+	--t-body: 1rem;
+	--t-small: 0.84375rem; /* 13.5 */
+	--t-eyebrow: 0.75rem; /* 12 — mono caps */
+	--t-micro: 0.6875rem; /* 11 */
+
+	/* Spacing (8px taban) */
+	--sp-1: 4px;
+	--sp-2: 8px;
+	--sp-3: 12px;
+	--sp-4: 16px;
+	--sp-5: 24px;
+	--sp-6: 32px;
+	--sp-7: 48px;
+	--sp-8: 64px;
+	--sp-9: 96px;
+	--sp-section: clamp(72px, 9vw, 116px);
+
+	/* Radius */
+	--r-chip: 10px;
+	--r-el: 14px;
+	--r-card: 18px;
+	--r-panel: 24px;
+	--r-pill: 999px;
+
+	/* Gölge — warm-black (28,25,23) taban */
+	--sh-1: 0 1px 2px rgba(28, 25, 23, 0.05);
+	--sh-2: 0 1px 2px rgba(28, 25, 23, 0.05), 0 16px 40px -20px rgba(28, 25, 23, 0.14);
+	--sh-phone: 0 32px 64px -32px rgba(28, 25, 23, 0.25);
+	--sh-btn: 0 1px 2px rgba(37, 99, 235, 0.2), 0 4px 12px -4px rgba(37, 99, 235, 0.25);
+
+	/* Motion — tek easing, dört süre */
+	--dur-1: 140ms;
+	--dur-2: 240ms;
+	--dur-3: 560ms;
+	--dur-draw: 700ms;
+	--ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
