@@ -42,7 +42,7 @@
 			<div class="eyebrow"><span class="dot"></span>İletişim</div>
 			<h1 class="h2 contact-h1">
 				Bir fikrin mi var?<br />
-				<span style="color:var(--ink-2);">Yaz bize.</span>
+				<span style="color:var(--accent);">Yaz bize.</span>
 			</h1>
 			<p class="lede">
 				Soru, öneri, işbirliği — hepsi için kapımız açık. En geç birkaç gün içinde döneriz.
@@ -106,79 +106,3 @@
 <Footer />
 
 <DownloadModal open={modalOpen} onClose={closeDownload} />
-
-<style>
-	.contact-container {
-		max-width: 720px;
-	}
-	.contact-h1 {
-		margin-top: 14px;
-	}
-	.contact-card {
-		margin-top: 40px;
-		background: var(--white);
-		border: 1px solid var(--border);
-		border-radius: var(--rad-lg);
-		box-shadow: var(--shadow-sm);
-		overflow: hidden;
-	}
-	.contact-row {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-		padding: 20px 22px;
-		color: var(--ink);
-		transition: background 0.15s ease;
-	}
-	.contact-row + .contact-row {
-		border-top: 1px solid var(--border);
-	}
-	.contact-row:hover {
-		background: var(--bg-2);
-	}
-	.contact-ic {
-		flex: none;
-		width: 44px;
-		height: 44px;
-		border-radius: 12px;
-		background: var(--accent-soft);
-		color: var(--accent);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.contact-ic svg {
-		width: 22px;
-		height: 22px;
-	}
-	.contact-text {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-		min-width: 0;
-	}
-	.contact-key {
-		font-size: 13px;
-		font-weight: 500;
-		color: var(--ink-3);
-	}
-	.contact-val {
-		font-size: 16px;
-		font-weight: 600;
-		color: var(--ink);
-		word-break: break-word;
-	}
-	.contact-kvkk {
-		margin-top: 24px;
-		font-size: 14px;
-		line-height: 1.6;
-		color: var(--ink-2);
-	}
-	.contact-kvkk a {
-		color: var(--accent);
-		font-weight: 500;
-	}
-	.contact-kvkk a:hover {
-		color: var(--accent-2);
-	}
-</style>

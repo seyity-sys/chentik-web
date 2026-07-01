@@ -36,7 +36,7 @@
 
 <Flow>
 	<!-- HERO -->
-	<header class="section hero" id="top">
+	<header class="section hero scope-veli" id="top">
 		<span class="node node-veli" aria-hidden="true">
 			<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>
 		</span>
@@ -59,9 +59,9 @@
 				</div>
 			</div>
 			<div class="phone-stage">
-				<div class="phone tilt">
+				<div class="paper-panel paper-panel--veli" aria-hidden="true"></div>
+				<div class="phone">
 					<div class="phone-screen">
-						<div class="phone-notch"></div>
 						<img src="/screenshots/v-istatistik.png" alt="Veli paneli — istatistik ekranı" loading="eager" />
 					</div>
 				</div>
@@ -70,8 +70,8 @@
 	</header>
 
 	<!-- BAĞLANIR + GÖRÜR -->
-	<section class="section veli-section" id="gorur">
-		<div class="section-head node-host">
+	<section class="section veli-section scope-veli" id="gorur">
+		<div class="section-head node-host reveal">
 			<span class="node node-veli" aria-hidden="true">
 				<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" /></svg>
 			</span>
@@ -81,13 +81,13 @@
 		</div>
 
 		<div class="feat">
-			<span class="node node-veli" aria-hidden="true" style="border-radius:50%"></span>
-			<div class="feat-copy">
-				<div class="feat-eyebrow" style="color:var(--veli)"><span class="dot" style="background:var(--veli)"></span>Nasıl bağlanır</div>
+			<span class="node node-veli" aria-hidden="true"></span>
+			<div class="feat-copy reveal">
+				<div class="feat-eyebrow"><span class="dot"></span>Nasıl bağlanır</div>
 				<h3 class="feat-h3">İzin temelli bağlantı.</h3>
 				<p>Davet kodu kovalamak yok. Profili sen kurarsın, çocuk kendi PIN'ini belirler. Her iki taraf istediği an kaldırır.</p>
 			</div>
-			<div class="dcard">
+			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-steps">
 					<div class="fr-step"><span class="n">1</span><div class="t">Profili oluştur</div></div>
 					<span class="fr-ar">→</span>
@@ -99,13 +99,13 @@
 		</div>
 
 		<div class="feat rev">
-			<span class="node node-veli" aria-hidden="true" style="border-radius:50%"></span>
-			<div class="feat-copy">
-				<div class="feat-eyebrow" style="color:var(--veli)"><span class="dot" style="background:var(--veli)"></span>Veli ne görür</div>
+			<span class="node node-veli" aria-hidden="true"></span>
+			<div class="feat-copy reveal">
+				<div class="feat-eyebrow"><span class="dot"></span>Veli ne görür</div>
 				<h3 class="feat-h3">Notlar değil — yalnızca ritim.</h3>
 				<p>Bugün tekrarladıkları, ders dağılımı, ilerleme. Soruların içeriğini değil; çalışma ritmini görürsün.</p>
 			</div>
-			<div class="dcard">
+			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-label">Ders dağılımı · bu hafta</div>
 				<div class="fr-dist">
 					<div class="row"><span class="nm">Matematik</span><span class="bar"><i style="width:100%;background:var(--mat)"></i></span><span class="v" style="color:var(--mat)">8</span></div>
@@ -121,23 +121,23 @@
 
 	<!-- GİZLİLİK ŞERİDİ -->
 	<section class="section tight" id="gizlilik">
-		<div class="section-head node-host" style="margin-bottom:24px">
-			<span class="node node-arc" aria-hidden="true">
+		<div class="section-head node-host reveal" style="margin-bottom:24px">
+			<span class="node" aria-hidden="true">
 				<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
 			</span>
 			<div class="eyebrow"><span class="dot"></span>Gizlilik</div>
 		</div>
-		<div class="privacy-band">
+		<div class="privacy-band reveal">
 			<div class="pt">
 				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
 				Çocuk verisi KVKK ile korunur
 			</div>
-			<p class="micro">Soru fotoğrafları herkese kapalı; yalnızca süreli, imzalı bağlantıyla cihazına açılır. Reklam yok, takip yok, üçüncü taraflara satış yok. Ayrıntı için <a href="/cocuk-verisi" style="color:var(--accent);font-weight:600">Çocuk Verisi sayfası</a>.</p>
+			<p class="micro">Soru fotoğrafları herkese kapalı; yalnızca süreli, imzalı bağlantıyla cihazına açılır. Reklam yok, takip yok, üçüncü taraflara satış yok. Ayrıntı için <a href="/cocuk-verisi">Çocuk Verisi sayfası</a>.</p>
 		</div>
 	</section>
 
 	<!-- FİNAL CTA -->
-	<section class="final" id="dene">
+	<section class="final reveal" id="dene">
 		<span class="node node-end" aria-hidden="true">
 			<svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7" /></svg>
 		</span>
