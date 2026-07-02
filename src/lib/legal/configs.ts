@@ -55,9 +55,9 @@ export const KVKK: LegalPage = {
 	title: 'KVKK Aydınlatma Metni',
 	subtitle:
 		'6698 sayılı Kişisel Verilerin Korunması Kanunu Madde 10 kapsamında veri sorumlusunun aydınlatma yükümlülüğü metni.',
-	updated: '20 Mayıs 2026',
+	updated: '2 Temmuz 2026',
 	published: '20 Mayıs 2026',
-	version: '2.0',
+	version: '2.1',
 	sections: [
 		{
 			id: 'veri-sorumlusu',
@@ -229,7 +229,7 @@ export const KVKK: LegalPage = {
 			body: [
 				CO(
 					'blue',
-					'13 yaşından küçük kullanıcılar için veli onayı şarttır. Detaylı bilgi için: <a href="/cocuk-verisi">Çocuk Verisi Sayfası →</a>'
+					'Çocuk hesapları veli tarafından açılır; işleme için açık rıza kayıt sırasında velinin kendisinden alınır. Detaylı bilgi için: <a href="/cocuk-verisi">Çocuk Verisi Sayfası →</a>'
 				)
 			]
 		},
@@ -273,9 +273,9 @@ export const GIZ: LegalPage = {
 	kicker: 'Yasal · Gizlilik',
 	title: 'Gizlilik Politikası',
 	subtitle: 'Verinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında ayrıntılı bilgi.',
-	updated: '20 Mayıs 2026',
+	updated: '2 Temmuz 2026',
 	published: '20 Mayıs 2026',
-	version: '2.0',
+	version: '2.1',
 	sections: [
 		{
 			id: 'giris',
@@ -334,7 +334,11 @@ export const GIZ: LegalPage = {
 					'Kullanım log kayıtları'
 				]),
 				SH('3.4 Veli-Öğrenci İlişki Verileri'),
-				UL(['Kurulum kodu ve bağlantı tarihi', 'Karşılıklı izin durumu']),
+				UL([
+					'Kurulum kodu kaydı — 6 haneli, tek kullanımlık, 15 dakika geçerli; üretim ve kullanılma zamanı, üreten veli, IP ve cihaz bilgisi denetim amacıyla tutulur',
+					'Cihaz bağlantı kaydı — cihaz belirteci yalnızca SHA-256 özeti olarak saklanır (ham belirteç tutulmaz); bağlantı tarihi ve son görülme zamanı kaydedilir',
+					'Karşılıklı izin durumu'
+				]),
 				SH('3.5 TOPLANMAYAN Veriler'),
 				CO(
 					'blue',
@@ -454,12 +458,12 @@ export const GIZ: LegalPage = {
 			body: [
 				CO(
 					'blue',
-					'13 yaşından küçük kullanıcılar için özel düzenlemeler uygulanır. Detaylı bilgi için: <a href="/cocuk-verisi">Çocuk Verisi Sayfası →</a>'
+					'Çocuk kullanıcılar için özel düzenlemeler uygulanır; hesapları veli açar. Detaylı bilgi için: <a href="/cocuk-verisi">Çocuk Verisi Sayfası →</a>'
 				),
 				SH('Özet:'),
 				UL([
-					'13 yaş altı için veli onayı şarttır',
-					'Veli onayı çift kanal ile doğrulanır',
+					'Çocuk hesabını veli açar; açık rıza kayıt sırasında veliden alınır',
+					'Rıza kaydı zaman damgası, IP ve cihaz bilgisiyle saklanır',
 					'Konum, fingerprinting, profilleme yapılmaz',
 					'Reklam gösterilmez, hiçbir koşulda'
 				])
@@ -501,10 +505,10 @@ export const COCUK: LegalPage = {
 	kicker: 'Yasal · Çocuk Verisi',
 	title: 'Çocuk Verisi Koruması',
 	subtitle:
-		'13 yaşından küçük kullanıcılar için özel düzenlemeler, veli onayı süreci ve veri minimizasyonu.',
-	updated: '20 Mayıs 2026',
+		'Çocuk hesapları için özel düzenlemeler, veli yönetimli kayıt süreci ve veri minimizasyonu.',
+	updated: '2 Temmuz 2026',
 	published: '20 Mayıs 2026',
-	version: '2.0',
+	version: '2.1',
 	intro: CO(
 		'gray',
 		'Chentik 5-8. sınıf (10-14 yaş) öğrencilere yönelik bir eğitim platformudur. Hedef kitlemizin önemli bir kısmı 13 yaşından küçüktür. Bu sayfa o yaş grubu için uyguladığımız özel korumaları detaylı şekilde açıklar.'
@@ -517,15 +521,15 @@ export const COCUK: LegalPage = {
 				TB(
 					['Sınıf', 'Yaş Aralığı', 'KVKK Statüsü'],
 					[
-						['5. sınıf', '10-11', 'Veli onayı ŞART'],
-						['6. sınıf', '11-12', 'Veli onayı ŞART'],
-						['7. sınıf', '12-13', 'Veli onayı ŞART'],
-						['8. sınıf', '13-14', 'Karma — 13 yaş üstü kendi onayı']
+						['5. sınıf', '10-11', 'Hesabı veli açar — açık rıza veliden'],
+						['6. sınıf', '11-12', 'Hesabı veli açar — açık rıza veliden'],
+						['7. sınıf', '12-13', 'Hesabı veli açar — açık rıza veliden'],
+						['8. sınıf', '13-14', 'Hesabı veli açar — açık rıza veliden']
 					]
 				),
-				P('Yaş eşiği: 13 yaş'),
+				P('Uygulama yaş veya doğum tarihi sormaz; kayıtta sınıf düzeyi (LGS yılı) seçilir.'),
 				P(
-					'Kaynak: GDPR Madde 8 ile uyumlu uluslararası standart; KVKK Kurul Kararları ile destekleniyor.'
+					'Çocuk hesapları yaş ayrımı yapılmaksızın veli tarafından açıldığı için işleme rızası her durumda velinin kendisinden alınır; bu yaklaşım GDPR Madde 8 ve KVKK Kurul Kararlarındaki ebeveyn onayı ilkesiyle uyumludur.'
 				)
 			]
 		},
@@ -548,7 +552,7 @@ export const COCUK: LegalPage = {
 				UL([
 					"GDPR Madde 8: 16 yaş eşiği (üye devletlerde 13'e kadar)",
 					'COPPA (ABD): 13 yaş eşiği',
-					'Chentik 13 yaş eşiğini benimsemiştir'
+					'Chentik eşik ayrımına gerek bırakmayan modeli benimser: hesap her yaşta veli tarafından açılır'
 				])
 			]
 		},
@@ -556,34 +560,38 @@ export const COCUK: LegalPage = {
 			id: 'veli-onay',
 			h: 'Veli Onay Süreci',
 			body: [
-				P('13 yaşından küçük kullanıcılar için çok aşamalı onay süreci:'),
-				SH('Adım 1: Çocuk Hesap Açar'),
-				UL(['Doğum tarihi alınır', '13 yaşından küçükse veli onayı ekranı çıkar']),
-				SH('Adım 2: Veli Bilgisi'),
-				UL(['Çocuk veli e-postasını girer', 'Veliye otomatik bilgilendirme e-postası']),
-				SH('Adım 3: Veli Onayı'),
+				P('Çocuk hesapları veli tarafından açılır; süreç tek yönlüdür:'),
+				SH('Adım 1: Veli Kendi Hesabını Açar'),
+				UL(['Veli kendi adına kayıt olur, KVKK metinlerini onaylar']),
+				SH('Adım 2: Çocuk Profilini Veli Oluşturur'),
 				UL([
-					'Veli e-postadaki linke tıklar',
-					'Onay formunu doldurur (ad, soyad, ilişki: anne/baba/vasi)',
-					"KVKK Aydınlatma ve Gizlilik Politikası'nı onaylar"
+					'Veliye aydınlatma metni gösterilir; işleme için açık rıza (ve isteğe bağlı yapay zekâ analizi onayı) kayıt sırasında velinin kendisinden alınır',
+					'Ad, sınıf düzeyi (LGS yılı), ders muafiyeti ve yakınlık (anne/baba/vasi) girilir — doğum tarihi veya yaş sorulmaz'
 				]),
-				SH('Adım 4: Doğrulama'),
+				SH('Adım 3: Kurulum Kodu'),
 				UL([
-					'Sistem onayı kaydeder',
-					'Onay zaman damgası saklanır',
-					'IP adresi ve cihaz bilgisi kaydedilir'
+					'Veli, çocuğun profil kartından 6 haneli kurulum kodu üretir',
+					'Kod tek kullanımlıktır ve 15 dakika geçerlidir'
 				]),
-				SH('Adım 5: Hesap Aktivasyonu'),
-				UL(['Veli onayı sonrası çocuk hesabı aktif olur']),
+				SH('Adım 4: Çocuk Cihazını Bağlar'),
+				UL([
+					"Çocuk, 'Çocuk girişi' ekranından kodu girer ve ilk girişte 6 haneli PIN'ini kendisi belirler",
+					'Sonraki girişler PIN ve hatırlanan cihazla yapılır; e-posta adresi gerekmez'
+				]),
+				SH('Adım 5: Kayıtlar'),
+				UL([
+					'Rıza kaydı zaman damgası, IP adresi ve cihaz bilgisiyle saklanır',
+					'Kurulum kodu ve cihaz bağlantısı denetim amacıyla kayıt altındadır'
+				]),
 				CO(
 					'red',
-					'Veli onayı yoksa hesap aktif olmaz, veri işleme başlamaz, AI analizi yapılmaz. 7 gün içinde onay alınmazsa kayıt iptal edilir.'
+					'Veli hesabı ve velinin açık rızası olmadan çocuk hesabı açılamaz; çocuk kendi başına hesap oluşturamaz. Veri işleme ve AI analizi ancak velinin verdiği rızayla başlar.'
 				)
 			]
 		},
 		{
 			id: 'ek-koruma',
-			h: '13 Yaş Altı İçin Ek Korumalar',
+			h: 'Çocuk Hesapları İçin Ek Korumalar',
 			body: [
 				SH('4.1 Veri Minimizasyonu'),
 				UL([
@@ -657,7 +665,7 @@ export const COCUK: LegalPage = {
 			body: [
 				CO(
 					'danger',
-					'<strong>Chentik, 13 yaşından küçük kullanıcılar için HİÇBİR KOŞULDA:</strong><ul><li>Reklam göstermez</li><li>3. taraflara veri satmaz veya kiralamaz</li><li>Pazarlama amaçlı kullanmaz</li><li>Davranışsal profilleme yapmaz</li><li>Konum verisi toplamaz</li><li>Mikrofon/kamera erişimi istemez (yanlış fotoğrafı dışında)</li><li>Pazarlama e-postası göndermez</li><li>Sosyal medya ile veri eşleştirmez</li><li>Cross-device tracking yapmaz</li></ul>'
+					'<strong>Chentik, çocuk kullanıcılar için HİÇBİR KOŞULDA:</strong><ul><li>Reklam göstermez</li><li>3. taraflara veri satmaz veya kiralamaz</li><li>Pazarlama amaçlı kullanmaz</li><li>Davranışsal profilleme yapmaz</li><li>Konum verisi toplamaz</li><li>Mikrofon/kamera erişimi istemez (yanlış fotoğrafı dışında)</li><li>Pazarlama e-postası göndermez</li><li>Sosyal medya ile veri eşleştirmez</li><li>Cross-device tracking yapmaz</li></ul>'
 				)
 			]
 		},
@@ -694,7 +702,7 @@ export const COCUK: LegalPage = {
 			body: [
 				CO(
 					'friendly',
-					'<strong>Merhaba!</strong><p>Eğer 13 yaşından küçüksen, Chentik kullanabilmen için annenin veya babanın izni gerekiyor. Bu, senin haklarını koruyor — Chentik senin verilerini kimseyle paylaşmaz, reklam göstermez ve seni başka şeylerle uğraştırmaz.</p><p>Anne veya babana e-posta gönderdik. Onaylayınca hesabın aktif olacak. Ondan sonra yanlışlarını çekmeye başlayabilirsin!</p>'
+					'<strong>Merhaba!</strong><p>Chentik hesabını annen ya da baban açar ve sana bir profil oluşturur. Senden yaş ya da doğum tarihi istemeyiz. Chentik senin verilerini kimseyle paylaşmaz, reklam göstermez ve seni başka şeylerle uğraştırmaz.</p><p>Velinin sana vereceği 6 haneli kurulum koduyla kendi cihazından girer, kendine bir PIN belirlersin. Ondan sonra yanlışlarını çekmeye başlayabilirsin.</p>'
 				)
 			]
 		},
@@ -731,7 +739,8 @@ export const COCUK: LegalPage = {
 			h: 'Versiyon Geçmişi',
 			body: [
 				UL([
-					'v2.0 — 20 Mayıs 2026 — Sıkı veli onayı süreci, yaş eşiği netleştirildi',
+					'v2.1 — 2 Temmuz 2026 — Kayıt modeli guncellendi: hesabı veli açar, çocuk tek kullanımlık kurulum koduyla cihazını bağlar; yaş/doğum tarihi sorulmaz',
+						'v2.0 — 20 Mayıs 2026 — Sıkı veli onayı süreci, yaş eşiği netleştirildi',
 					'v1.0 — 15 Mayıs 2026 — İlk versiyon (yumuşak yaklaşım)'
 				])
 			]

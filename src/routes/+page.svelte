@@ -221,8 +221,8 @@
 			<span class="node node-veli" aria-hidden="true"></span>
 			<div class="feat-copy reveal">
 				<div class="feat-eyebrow"><span class="dot"></span>Nasıl bağlanır</div>
-				<h3 class="feat-h3">İzinle, davet kodu kovalamadan.</h3>
-				<p>Profili sen kurarsın; çocuk kendi cihazında kendi PIN'ini belirler. Her iki taraf bağlantıyı istediği an kaldırır.</p>
+				<h3 class="feat-h3">Kurulumu veli yapar.</h3>
+				<p>Profili sen kurarsın; çocuk, tek kullanımlık kurulum koduyla bağlanır ve kendi cihazında kendi PIN'ini belirler. Paylaşımı öğrenci istediği an kapatabilir.</p>
 			</div>
 			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-steps">
@@ -238,7 +238,7 @@
 			<div class="feat-copy reveal">
 				<div class="feat-eyebrow"><span class="dot"></span>Veli ne görür</div>
 				<h3 class="feat-h3">Notlar değil — yalnızca ritim.</h3>
-				<p>Bugün tekrarladıkları, ders dağılımı, ilerleme. Soruların içeriğini değil; çalışma ritmini görürsün.</p>
+				<p>Bugün tekrarladıkları, ders dağılımı, deneme sonuçları. Yanlış defterine erişim, öğrencinin verdiği izne bağlıdır.</p>
 				<span class="kvkk-note">
 					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" /><path d="M9 12l2 2 4-4" /></svg>
 					Çocuk verisi KVKK ile korunur

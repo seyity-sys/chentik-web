@@ -85,7 +85,7 @@
 			<div class="feat-copy reveal">
 				<div class="feat-eyebrow"><span class="dot"></span>Nasıl bağlanır</div>
 				<h3 class="feat-h3">İzin temelli bağlantı.</h3>
-				<p>Davet kodu kovalamak yok. Profili sen kurarsın, çocuk kendi PIN'ini belirler. Her iki taraf istediği an kaldırır.</p>
+				<p>Profili sen kurarsın; çocuk, tek kullanımlık kurulum koduyla bağlanır ve kendi PIN'ini belirler. Paylaşımı öğrenci istediği an kapatabilir.</p>
 			</div>
 			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-steps">
@@ -103,7 +103,7 @@
 			<div class="feat-copy reveal">
 				<div class="feat-eyebrow"><span class="dot"></span>Veli ne görür</div>
 				<h3 class="feat-h3">Notlar değil — yalnızca ritim.</h3>
-				<p>Bugün tekrarladıkları, ders dağılımı, ilerleme. Soruların içeriğini değil; çalışma ritmini görürsün.</p>
+				<p>Bugün tekrarladıkları, ders dağılımı, deneme sonuçları. Yanlış defterine erişim, öğrencinin verdiği izne bağlıdır.</p>
 			</div>
 			<div class="dcard dcard--veli reveal reveal--paper">
 				<div class="fr-label">Ders dağılımı · bu hafta</div>
