@@ -7,7 +7,7 @@
 	<title>Gizlilik Politikası — Chentik</title>
 	<meta
 		name="description"
-		content="Chentik gizlilik politikası v2.0. Toplanan veriler, çerez politikası, güvenlik önlemleri, kullanıcı hakları."
+		content="Chentik gizlilik politikası v2.1. Toplanan veriler, çerez politikası, güvenlik önlemleri, kullanıcı hakları."
 	/>
 	<meta property="og:title" content="Gizlilik Politikası — Chentik" />
 	<meta

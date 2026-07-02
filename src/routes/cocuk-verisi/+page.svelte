@@ -7,12 +7,12 @@
 	<title>Çocuk Verisi Koruması — Chentik</title>
 	<meta
 		name="description"
-		content="13 yaş altı kullanıcılar için veli onayı süreci, KVKK Madde 8 + GDPR Madde 8 uyumlu çocuk verisi koruma politikası."
+		content="Çocuk hesaplarını veli açar: veli yönetimli kayıt, kurulum koduyla cihaz bağlama, KVKK uyumlu çocuk verisi koruma politikası."
 	/>
 	<meta property="og:title" content="Çocuk Verisi Koruması — Chentik" />
 	<meta
 		property="og:description"
-		content="13 yaşından küçük kullanıcılar için özel düzenlemeler, veli onayı süreci ve veri minimizasyonu."
+		content="Çocuk hesapları için özel düzenlemeler, veli yönetimli kayıt süreci ve veri minimizasyonu."
 	/>
 	<meta property="og:image" content="https://www.chentik.app/og-image.png" />
 	<meta property="og:image:width" content="1024" />
@@ -24,7 +24,7 @@
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="Çocuk Verisi Koruması — Chentik" />
-	<meta name="twitter:description" content="13 yaşından küçük kullanıcılar için özel düzenlemeler, veli onayı süreci ve veri minimizasyonu." />
+	<meta name="twitter:description" content="Çocuk hesapları için özel düzenlemeler, veli yönetimli kayıt süreci ve veri minimizasyonu." />
 	<meta name="twitter:image" content="https://www.chentik.app/og-image.png" />
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
