@@ -3,14 +3,8 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Tally from '$lib/components/Tally.svelte';
 	import DeviceFrame from '$lib/components/DeviceFrame.svelte';
-
-	let soon = $state(false);
-	let soonTimer: ReturnType<typeof setTimeout> | undefined;
-	function comingSoon() {
-		soon = true;
-		clearTimeout(soonTimer);
-		soonTimer = setTimeout(() => (soon = false), 2600);
-	}
+	import StoreBadges from '$lib/components/StoreBadges.svelte';
+	import Rail from '$lib/components/Rail.svelte';
 </script>
 
 <svelte:head>
@@ -43,9 +37,10 @@
 </svelte:head>
 
 <Nav />
+<Rail />
 
 <!-- HERO — gece sahnesi -->
-<header class="section hero stage stage--deep grain" id="top" style="--aura-x:72%; --aura-y:24%">
+<header class="section hero stage stage--deep grain" id="top" data-rail style="--aura-x:72%; --aura-y:24%">
 	<div class="container hero-grid">
 		<div>
 			<div class="eyebrow boot-1"><Tally n={1} />Yanlış defteri · LGS ve YKS</div>
@@ -63,17 +58,12 @@
 				Yanlış soruyu fotoğrafla deftere ekle. Yapay zekâ dersi, konuyu ve hata türünü etiketler;
 				Chentik soruyu 1, 3, 7 ve 21. gün yeniden önüne getirir.
 			</p>
-			<div class="hero-cta boot-4">
-				<a class="btn btn-primary" href="https://app.chentik.app" rel="noopener">
-					Uygulamayı aç
-					<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" /></svg>
-				</a>
-				<a class="btn btn-ghost" href="#nasil">Nasıl çalışır</a>
+			<div class="boot-4">
+				<StoreBadges />
 			</div>
 			<div class="hero-note boot-4">
 				<span class="mark mark--done" aria-hidden="true"></span><span>Beta boyunca ücretsiz</span>
 				<span class="mark mark--done" aria-hidden="true"></span><span>Reklamsız</span>
-				<span class="mark" aria-hidden="true"></span><span>Web'de canlı · iOS ve Android yakında</span>
 			</div>
 		</div>
 		<div class="hero-stage boot-4">
@@ -91,7 +81,7 @@
 </header>
 
 <!-- NASIL ÇALIŞIR — 3 adım -->
-<section class="section stage" id="nasil" style="--aura-x:18%; --aura-y:12%">
+<section class="section stage" id="nasil" data-rail style="--aura-x:18%; --aura-y:12%">
 	<div class="container">
 		<div class="reveal">
 			<div class="eyebrow"><Tally n={2} />Nasıl çalışır</div>
@@ -175,7 +165,7 @@
 </section>
 
 <!-- DEFTER — kapanış metaforu -->
-<section class="section stage" id="defter" style="--aura-x:78%; --aura-y:40%; --aura-x2:8%; --aura-y2:90%">
+<section class="section stage" id="defter" data-rail style="--aura-x:78%; --aura-y:40%; --aura-x2:8%; --aura-y2:90%">
 	<div class="container defter-scene">
 		<div class="reveal">
 			<div class="eyebrow"><Tally n={3} />Defter</div>
@@ -189,6 +179,7 @@
 				<span class="chip chip--ders" style="--neon:var(--neon-turkce)">Türkçe</span>
 				<span class="chip chip--ders" style="--neon:var(--neon-fen)">Fen Bilimleri</span>
 				<span class="chip chip--ders" style="--neon:var(--neon-inkilap)">İnkılap</span>
+				<span class="chip chip--ders" style="--neon:var(--neon-din)">Din Kültürü</span>
 				<span class="chip chip--ders" style="--neon:var(--neon-yabanci)">Yabancı Dil</span>
 			</div>
 		</div>
@@ -205,7 +196,7 @@
 </section>
 
 <!-- BENTO — defterin çevresi -->
-<section class="section stage stage--flat" id="ozellikler">
+<section class="section stage stage--flat" id="ozellikler" data-rail>
 	<div class="container">
 		<div class="reveal">
 			<div class="eyebrow"><Tally n={4} />Defterin çevresi</div>
@@ -298,7 +289,7 @@
 </section>
 
 <!-- VELİ ŞERİDİ — sakin oda -->
-<section class="section veli-band stage stage--flat" id="veli">
+<section class="section veli-band stage stage--flat" id="veli" data-rail>
 	<div class="container veli-grid">
 		<div class="reveal">
 			<div class="eyebrow" style="color:var(--amber-300)"><Tally n={5} />Veliler için</div>
@@ -308,9 +299,9 @@
 				görürsünüz. Yanlış defterine erişim öğrencinin izniyle açılır.
 			</p>
 			<ul class="trust">
-				<li><span class="mark" aria-hidden="true"></span>Kurulumu veli yapar; çocuk kendi cihazında altı haneli PIN'iyle, e-postasız giriş yapar.</li>
+				<li><span class="mark" aria-hidden="true"></span>Çocuk hesabını veli açar; açık rıza kayıtta velinin kendisinden alınır.</li>
+				<li><span class="mark" aria-hidden="true"></span>Çocuk, velinin ürettiği tek kullanımlık kurulum koduyla bağlanır ve kendine altı haneli bir PIN belirler — e-posta gerekmez.</li>
 				<li><span class="mark" aria-hidden="true"></span>Soru fotoğrafları herkese kapalı depoda durur; yalnızca kısa ömürlü imzalı bağlantıyla açılır.</li>
-				<li><span class="mark" aria-hidden="true"></span>13 yaşından küçük öğrencilerde kayıt, veli onayıyla tamamlanır.</li>
 				<li><span class="mark" aria-hidden="true"></span>Reklam yok, izleme yok. Hesap uygulama içinden kalıcı olarak silinir.</li>
 				<li><span class="mark" aria-hidden="true"></span>Birden fazla çocuk tek veli hesabından takip edilir.</li>
 			</ul>
@@ -342,7 +333,7 @@
 </section>
 
 <!-- BİLİM KÖPRÜSÜ -->
-<section class="section section--tight stage" id="bilim-koprusu" style="--aura-x:50%; --aura-y:0%">
+<section class="section section--tight stage" id="bilim-koprusu" data-rail style="--aura-x:50%; --aura-y:0%">
 	<div class="container">
 		<div class="reveal">
 			<div class="eyebrow">Yöntem</div>
@@ -389,7 +380,7 @@
 </section>
 
 <!-- KAPANIŞ -->
-<section class="section finale stage stage--deep grain" id="dene" style="--aura-x:50%; --aura-y:30%">
+<section class="section finale stage stage--deep grain" id="dene" data-rail style="--aura-x:50%; --aura-y:30%">
 	<div class="container">
 		<svg class="finale-tally reveal" viewBox="0 0 92 30" aria-hidden="true">
 			<line x1="8" y1="5" x2="6" y2="25" />
@@ -399,28 +390,11 @@
 			<circle cx="82" cy="15" r="7" fill="var(--blue-400)" />
 		</svg>
 		<h2 class="t-h1 reveal" style="--i:1">Defterin seni bekliyor.</h2>
-		<p class="lede reveal" style="--i:2">Web'de canlı. Beta boyunca ücretsiz.</p>
-		<div class="hero-cta reveal" style="--i:3">
-			<a class="btn btn-primary" href="https://app.chentik.app" rel="noopener">
-				Uygulamayı aç
-				<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" /></svg>
-			</a>
-		</div>
-		<div class="store-note reveal" style="--i:4">
-			<button type="button" class="store-badge" aria-disabled="true" onclick={comingSoon}>
-				<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.04c-.03-2.99 2.44-4.42 2.55-4.49-1.39-2.03-3.55-2.31-4.32-2.34-1.84-.19-3.59 1.08-4.52 1.08-.94 0-2.38-1.05-3.91-1.02-2.01.03-3.86 1.17-4.89 2.97-2.09 3.62-.53 8.97 1.49 11.91.99 1.44 2.16 3.05 3.7 2.99 1.49-.06 2.05-.96 3.85-.96 1.8 0 2.31.96 3.88.93 1.6-.03 2.61-1.46 3.59-2.91 1.14-1.67 1.6-3.28 1.62-3.36-.04-.02-3.11-1.19-3.14-4.73zM14.06 3.5c.82-1 1.37-2.39 1.22-3.77-1.18.05-2.61.79-3.46 1.78-.76.88-1.42 2.29-1.24 3.65 1.32.1 2.66-.67 3.48-1.66z" /></svg>
-				<span><small>Yakında</small><b>App Store</b></span>
-			</button>
-			<button type="button" class="store-badge" aria-disabled="true" onclick={comingSoon}>
-				<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.5c-.3.2-.5.5-.5 1v17c0 .5.2.8.5 1l9.3-9.5L4 2.5z" /><path d="M16.8 9.3 13.4 12l3.4 2.7 3.5-2c.7-.4.7-1.3 0-1.7l-3.5-1.7z" /><path d="M4 2.5 14.2 11l2.6-1.7L5.6 2.8c-.5-.3-1.1-.4-1.6-.3z" opacity=".8" /><path d="M4 21.5 14.2 13l2.6 1.7-11.2 6.5c-.5.3-1.1.4-1.6.3z" opacity=".6" /></svg>
-				<span><small>Yakında</small><b>Google Play</b></span>
-			</button>
+		<p class="lede reveal" style="--i:2">Beta boyunca ücretsiz. Reklamsız.</p>
+		<div class="reveal" style="--i:3">
+			<StoreBadges center />
 		</div>
 	</div>
 </section>
 
 <Footer />
-
-{#if soon}
-	<div class="toast" role="status" aria-live="polite">Çok yakında App Store ve Google Play'de.</div>
-{/if}

@@ -45,10 +45,6 @@
 					<span class="mark" aria-hidden="true"></span>
 					<span><span class="contact-key">Instagram</span><span class="contact-val">@chentik.official</span></span>
 				</a>
-				<a class="contact-row" href="https://app.chentik.app" rel="noopener">
-					<span class="mark" aria-hidden="true"></span>
-					<span><span class="contact-key">Uygulama</span><span class="contact-val">app.chentik.app</span></span>
-				</a>
 			</div>
 		</div>
 

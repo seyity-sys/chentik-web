@@ -2,6 +2,8 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Tally from '$lib/components/Tally.svelte';
+	import StoreBadges from '$lib/components/StoreBadges.svelte';
+	import Rail from '$lib/components/Rail.svelte';
 </script>
 
 <svelte:head>
@@ -31,8 +33,9 @@
 </svelte:head>
 
 <Nav activePage="bilim" />
+<Rail />
 
-<header class="page-hero stage stage--deep grain" id="top" style="--aura-x:50%; --aura-y:10%">
+<header class="page-hero stage stage--deep grain" id="top" data-rail style="--aura-x:50%; --aura-y:10%">
 	<div class="container">
 		<div class="eyebrow boot-1"><Tally n={1} />Yöntem · Bilimsel temel</div>
 		<h1 class="t-display boot-2">Unutma eğrisine karşı.</h1>
@@ -78,7 +81,7 @@
 	</div>
 </section>
 
-<section class="section stage" id="bulgular" style="--aura-x:20%; --aura-y:20%">
+<section class="section stage" id="bulgular" data-rail style="--aura-x:20%; --aura-y:20%">
 	<div class="container">
 		<div class="reveal">
 			<div class="eyebrow"><Tally n={2} />Üç bulgu</div>
@@ -116,15 +119,12 @@
 	</div>
 </section>
 
-<section class="section finale stage stage--deep grain" id="dene" style="--aura-x:50%; --aura-y:30%">
+<section class="section finale stage stage--deep grain" id="dene" data-rail style="--aura-x:50%; --aura-y:30%">
 	<div class="container">
 		<h2 class="t-h1 reveal">Yöntem hazır; defter senin.</h2>
 		<p class="lede reveal" style="--i:1">Her hata bir çentik. Her çentik bir adım.</p>
-		<div class="hero-cta reveal" style="--i:2">
-			<a class="btn btn-primary" href="https://app.chentik.app" rel="noopener">
-				Uygulamayı aç
-				<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" /></svg>
-			</a>
+		<div class="reveal" style="--i:2">
+			<StoreBadges center />
 		</div>
 	</div>
 </section>

@@ -3,6 +3,8 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Tally from '$lib/components/Tally.svelte';
 	import DeviceFrame from '$lib/components/DeviceFrame.svelte';
+	import StoreBadges from '$lib/components/StoreBadges.svelte';
+	import Rail from '$lib/components/Rail.svelte';
 </script>
 
 <svelte:head>
@@ -29,9 +31,10 @@
 </svelte:head>
 
 <Nav activePage="veliler" />
+<Rail />
 
 <div class="veli-band" style="border-top:0">
-	<header class="page-hero stage stage--amber" id="top" style="--aura-x:70%; --aura-y:20%">
+	<header class="page-hero stage stage--amber" id="top" data-rail style="--aura-x:70%; --aura-y:20%">
 		<div class="container veli-grid">
 			<div>
 				<div class="eyebrow boot-1" style="color:var(--amber-300)"><Tally n={1} />Veliler için</div>
@@ -41,12 +44,8 @@
 					görürsünüz; yanlış defterine erişim öğrencinin izniyle açılır. Yorum yok, not yok —
 					sadece durum.
 				</p>
-				<div class="hero-cta boot-4">
-					<a class="btn btn-primary" href="https://app.chentik.app" rel="noopener">
-						Uygulamayı aç
-						<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" /></svg>
-					</a>
-					<a class="btn btn-ghost" href="#guven">Güven ilkeleri</a>
+				<div class="boot-4">
+					<StoreBadges />
 				</div>
 				<div class="hero-note boot-4">
 					<span class="mark mark--done" aria-hidden="true"></span><span>Beta boyunca ücretsiz</span>
@@ -77,7 +76,7 @@
 		</div>
 	</header>
 
-	<section class="section stage stage--flat" id="nasil-kurulur">
+	<section class="section stage stage--flat" id="nasil-kurulur" data-rail>
 		<div class="container">
 			<div class="reveal">
 				<div class="eyebrow" style="color:var(--amber-300)"><Tally n={2} />Kurulum</div>
@@ -86,24 +85,24 @@
 			<div class="blocks">
 				<div class="block reveal">
 					<div class="eyebrow"><span class="num">01</span></div>
-					<h3 class="t-h3">Profili oluşturursunuz.</h3>
-					<p>Çocuğunuzun profilini kendi veli hesabınızın içinden açarsınız; birden fazla çocuk tek hesaptan takip edilir.</p>
+					<h3 class="t-h3">Hesabı siz açarsınız.</h3>
+					<p>Kayıt olur, çocuğunuzun profilini veli hesabınızın içinden oluşturursunuz; açık rızayı kayıt sırasında siz verirsiniz. Yaş ya da doğum tarihi sorulmaz; sınıf seçilir. Birden fazla çocuk tek hesaptan takip edilir.</p>
 				</div>
 				<div class="block reveal" style="--i:1">
 					<div class="eyebrow"><span class="num">02</span></div>
-					<h3 class="t-h3">Kurulum kodunu verirsiniz.</h3>
-					<p>Çocuk, kendi cihazında bu kodla ilk girişini yapar ve kendine altı haneli bir PIN belirler.</p>
+					<h3 class="t-h3">Kurulum kodu üretirsiniz.</h3>
+					<p>Çocuğun profil kartından tek kullanımlık, 15 dakika geçerli altı haneli kurulum kodunu alırsınız.</p>
 				</div>
 				<div class="block reveal" style="--i:2">
 					<div class="eyebrow"><span class="num">03</span></div>
-					<h3 class="t-h3">Çocuk PIN'iyle girer.</h3>
-					<p>E-posta gerekmez; cihaz hatırlanır. Gerekirse cihazı veli hesabınızdan iptal edersiniz.</p>
+					<h3 class="t-h3">Çocuk kodla bağlanır, PIN'ini kendisi belirler.</h3>
+					<p>Çocuk, kendi cihazında "Çocuk girişi"nden kodu girer ve kendine altı haneli bir PIN belirler; sonraki girişler PIN ve hatırlanan cihazla olur — e-posta gerekmez. Gerekirse cihazı veli hesabınızdan iptal edersiniz.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="section stage stage--amber" id="ne-gorur" style="--aura-x:20%; --aura-y:30%">
+	<section class="section stage stage--amber" id="ne-gorur" data-rail style="--aura-x:20%; --aura-y:30%">
 		<div class="container">
 			<div class="reveal">
 				<div class="eyebrow" style="color:var(--amber-300)"><Tally n={3} />Panel</div>
@@ -130,7 +129,7 @@
 		</div>
 	</section>
 
-	<section class="section stage stage--flat" id="guven">
+	<section class="section stage stage--flat" id="guven" data-rail>
 		<div class="container">
 			<div class="reveal">
 				<div class="eyebrow" style="color:var(--amber-300)"><Tally n={4} />Güven</div>
@@ -139,7 +138,7 @@
 			<ul class="trust" style="max-width:64ch">
 				<li class="reveal"><span class="mark" aria-hidden="true"></span>Reklam yok; reklam kimliği (IDFA/AAID) işlenmez, üçüncü taraf izleme yok.</li>
 				<li class="reveal" style="--i:1"><span class="mark" aria-hidden="true"></span>Soru fotoğrafları herkese kapalı depoda tutulur; yalnızca kısa ömürlü imzalı bağlantıyla, sahibi ve onaylı velisi tarafından açılır.</li>
-				<li class="reveal" style="--i:2"><span class="mark" aria-hidden="true"></span>13 yaşından küçük öğrencilerde kayıt veli onayı olmadan tamamlanmaz.</li>
+				<li class="reveal" style="--i:2"><span class="mark" aria-hidden="true"></span>Çocuk hesabı veli tarafından, kayıtta alınan açık rızayla açılır; çocuk hesap açamaz.</li>
 				<li class="reveal" style="--i:3"><span class="mark" aria-hidden="true"></span>Hesap, uygulamanın içinden kalıcı olarak silinebilir.</li>
 				<li class="reveal" style="--i:4"><span class="mark" aria-hidden="true"></span>Beta boyunca ücretsiz; ödeme bilgisi istenmez.</li>
 			</ul>
@@ -150,15 +149,12 @@
 		</div>
 	</section>
 
-	<section class="section finale stage stage--deep grain" id="dene" style="--aura-x:50%; --aura-y:30%">
+	<section class="section finale stage stage--deep grain" id="dene" data-rail style="--aura-x:50%; --aura-y:30%">
 		<div class="container">
 			<h2 class="t-h1 reveal">Sakin bir pencere, yeterli bir görüş.</h2>
 			<p class="lede reveal" style="--i:1">Her hata bir çentik. Her çentik bir adım.</p>
-			<div class="hero-cta reveal" style="--i:2">
-				<a class="btn btn-primary" href="https://app.chentik.app" rel="noopener">
-					Uygulamayı aç
-					<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="13 6 19 12 13 18" /></svg>
-				</a>
+			<div class="reveal" style="--i:2">
+				<StoreBadges center />
 			</div>
 		</div>
 	</section>

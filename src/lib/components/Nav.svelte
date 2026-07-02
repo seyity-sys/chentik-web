@@ -39,6 +39,5 @@
 			<a href="/iletisim" class:is-active={activePage === 'iletisim'} aria-current={activePage === 'iletisim' ? 'page' : undefined}>İletişim</a>
 		</div>
 
-		<a class="nav-cta" href="https://app.chentik.app" rel="noopener">Uygulamayı aç</a>
 	</div>
 </nav>
