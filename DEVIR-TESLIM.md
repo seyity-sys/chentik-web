@@ -26,6 +26,15 @@ SADECE branch; main'e merge YOK, deploy YOK (canlı = v3 debafa68).
   (Seyit geri bildirimi): TÜM app-shot'lar vektörel iPhone gövdesi + çizili 9:41
   status bar + bilinçli taşma/fade sunumuna geçti (DeviceFrame.svelte, .shot öldü;
   veli çekimlerinin kendi bar'ı kırpıldı). Ölçüm sonrası: LH 92/97, JS 44.2KB, LCP 76ms.
+  DÜZELTME TURU 2 (Seyit video geri bildirimi): sol kenar neon cetveli (Rail.svelte,
+  ≥1100px, kenetlenen duraklar) · sayfa-sonu ölü alan legal 90→36px + veli cihaz 470px
+  kırpma · WEB-KULLANIM TEMİZLİĞİ (tüm 'Uygulamayı aç'/app.chentik.app/'Web'de canlı'
+  kaldırıldı; birincil CTA=mağaza rozetleri Yakında+toast) · KAYIT MODELİ derin araştırma
+  (kanıt: URUN-GERCEKLERI-V4.md 'Kayıt Modeli'): veli-kurar → 'Kurulum kodu' (6 haneli,
+  15dk, tek kullanımlık) → çocuk kod+KENDİ PIN'i; yaş sorusu YOK; 'Yanlışlarımı görebilir'
+  izni CANLI (site çerçevesi doğru); 'davet kodu' ÖLÜ legacy — site metinleri buna göre
+  yazıldı; LEGAL sayfalar ESKİ modeli anlatıyor → AÇIK KARAR (ayrı sprint). Din Kültürü
+  ders çipi eklendi. Son ölçüm: LH 90/97 · JS 45.0KB gz · CLS 0.
 - AÇIK KARARLAR: (1) YKS ağırlığı — varsayılan bento-ikincil; (2) sınav ekran görüntüsü
   üçüncü-taraf deneme adları (bilfen/palme/mozaik) yüzünden kullanılmadı; (3) "beta boyunca
   ücretsiz" zaman-bağlı çerçeve; (4) veli-shot'lar v3 setinden — taze çekim için veli test
