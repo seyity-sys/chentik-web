@@ -8,8 +8,15 @@ Seyit localhost onayı sonrası canlıya alındı (2026-07-02): `redesign-v3-fab
 main FF-merge (8ec2eb7) + push; `npm run build` + `npx wrangler versions upload`
 (preview'da 11 route + 940-parça metin paritesi + SEO doğrulandı) →
 `npx wrangler versions deploy 69fbae4b-...@100%`.
-**Canlı versiyon: `69fbae4b-ed46-4a36-8096-d51c2430e9c7`.
-ROLLBACK: `npx wrangler versions deploy 216275d9-dcc1-415c-85bb-306689cfa020@100% -y`** (eski KALIP-2).
+**Canlı versiyon: `debafa68-002b-4be1-a3c9-4a5507f27966`** (mobil-fix turu, 2 Tem öğlen;
+önceki v3 = 69fbae4b).
+**ROLLBACK: `npx wrangler versions deploy 216275d9-dcc1-415c-85bb-306689cfa020@100% -y`** (eski KALIP-2).
+
+Mobil-fix turu (30f9264, Seyit telefon videosu üzerine): kenar cetveli artık MOBİLDE DE var
+(kompakt responsive geometri; kenetlenen tally node'ları + scroll dolgusu mobilde oynuyor);
+final çentik imzası kaskad hatası düzeltildi (html.js animation:none tetikleyiciyi eziyordu —
+paused→running deseni; '4 nokta' artefaktının kaynağı 1.02 dashoffset de 1'e çekildi).
+Doğrulama: Playwright webkit(=iOS)+chromium 390px canlıda rail ✅ imza-çizimi ✅ kenetlenme 13/13 ✅.
 Canlı mühür: 9 route 200, theme-color #fdfcfa, Fraunces asset'i sunuluyor, motto/
 kritik metinler grep'le doğrulandı. Not: toast metni ("Çok yakında App Store…")
 {#if soon} istemci-koşullu — SSR'da görünmemesi normal.
