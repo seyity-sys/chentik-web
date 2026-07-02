@@ -2,6 +2,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Tally from '$lib/components/Tally.svelte';
+	import DeviceFrame from '$lib/components/DeviceFrame.svelte';
 
 	let soon = $state(false);
 	let soonTimer: ReturnType<typeof setTimeout> | undefined;
@@ -76,16 +77,15 @@
 			</div>
 		</div>
 		<div class="hero-stage boot-4">
-			<div class="shot">
-				<img
-					src="/app-shots/bugun.webp"
-					srcset="/app-shots/bugun.webp 1x, /app-shots/bugun@2x.webp 2x"
-					width="390"
-					height="345"
-					alt="Chentik ana ekranı: bugünün tekrar listesi ve LGS'ye kalan gün sayacı"
-					fetchpriority="high"
-				/>
-			</div>
+			<DeviceFrame
+				src="/app-shots/bugun.webp"
+				srcset="/app-shots/bugun.webp 1x, /app-shots/bugun@2x.webp 2x"
+				width={390}
+				height={345}
+				alt="Chentik ana ekranı: bugünün tekrar listesi ve LGS'ye kalan gün sayacı"
+				glow="rgba(37, 99, 235, 0.34)"
+				eager
+			/>
 		</div>
 	</div>
 </header>
@@ -117,16 +117,13 @@
 					<p class="step-foot">Her yanlış beş hata türünden biriyle etiketlenir.</p>
 				</div>
 				<div class="step-scene reveal" style="--i:1">
-					<div class="shot">
-						<img
-							src="/app-shots/yeni-yanlis.webp"
-							srcset="/app-shots/yeni-yanlis.webp 1x, /app-shots/yeni-yanlis@2x.webp 2x"
-							width="390"
-							height="470"
-							loading="lazy"
-							alt="Yeni yanlış ekleme ekranı: fotoğraf ekleme alanı ve hata türü seçenekleri"
-						/>
-					</div>
+					<DeviceFrame
+						src="/app-shots/yeni-yanlis.webp"
+						srcset="/app-shots/yeni-yanlis.webp 1x, /app-shots/yeni-yanlis@2x.webp 2x"
+						width={390}
+						height={470}
+						alt="Yeni yanlış ekleme ekranı: fotoğraf ekleme alanı ve hata türü seçenekleri"
+					/>
 				</div>
 			</div>
 
@@ -140,16 +137,13 @@
 					</p>
 				</div>
 				<div class="step-scene reveal" style="--i:1">
-					<div class="shot">
-						<img
-							src="/app-shots/konu-rozet.webp"
-							srcset="/app-shots/konu-rozet.webp 1x, /app-shots/konu-rozet@2x.webp 2x"
-							width="390"
-							height="390"
-							loading="lazy"
-							alt="Yanlış defteri kartları: yapay zekânın etiketlediği konu rozetleri"
-						/>
-					</div>
+					<DeviceFrame
+						src="/app-shots/konu-rozet.webp"
+						srcset="/app-shots/konu-rozet.webp 1x, /app-shots/konu-rozet@2x.webp 2x"
+						width={390}
+						height={390}
+						alt="Yanlış defteri kartları: yapay zekânın etiketlediği konu rozetleri"
+					/>
 				</div>
 			</div>
 
@@ -198,17 +192,14 @@
 				<span class="chip chip--ders" style="--neon:var(--neon-yabanci)">Yabancı Dil</span>
 			</div>
 		</div>
-		<div class="reveal" style="--i:1">
-			<div class="shot">
-				<img
-					src="/app-shots/yanlislarim.webp"
-					srcset="/app-shots/yanlislarim.webp 1x, /app-shots/yanlislarim@2x.webp 2x"
-					width="390"
-					height="590"
-					loading="lazy"
-					alt="Yanlışlarım ekranı: toplam yanlış sayısı ve ders ders dağılım kartları"
-				/>
-			</div>
+		<div class="reveal defter-device" style="--i:1">
+			<DeviceFrame
+				src="/app-shots/yanlislarim.webp"
+				srcset="/app-shots/yanlislarim.webp 1x, /app-shots/yanlislarim@2x.webp 2x"
+				width={390}
+				height={590}
+				alt="Yanlışlarım ekranı: toplam yanlış sayısı ve ders ders dağılım kartları"
+			/>
 		</div>
 	</div>
 </section>
@@ -231,13 +222,13 @@
 				</p>
 				<span class="micro">Net kesindir, puan tahminidir.</span>
 				<div class="cell-media">
-					<img
+					<DeviceFrame
 						src="/app-shots/trend.webp"
 						srcset="/app-shots/trend.webp 1x, /app-shots/trend@2x.webp 2x"
-						width="390"
-						height="245"
-						loading="lazy"
+						width={390}
+						height={245}
 						alt="İstatistik ekranındaki deneme puanı eğrisi"
+						glow="rgba(37, 99, 235, 0.2)"
 					/>
 				</div>
 			</div>
@@ -246,13 +237,13 @@
 				<h3 class="t-h3">Yanlışların, ders ders.</h3>
 				<p>Hangi derste, hangi konuda yığılma var — dağılım ekranı gösterir.</p>
 				<div class="cell-media">
-					<img
+					<DeviceFrame
 						src="/app-shots/dagilim.webp"
 						srcset="/app-shots/dagilim.webp 1x, /app-shots/dagilim@2x.webp 2x"
-						width="390"
-						height="480"
-						loading="lazy"
+						width={390}
+						height={480}
 						alt="Ders bazlı yanlış dağılımı kartları"
+						glow="rgba(37, 99, 235, 0.2)"
 					/>
 				</div>
 			</div>
@@ -328,11 +319,23 @@
 			</div>
 		</div>
 		<div class="veli-shots reveal" style="--i:1">
-			<div class="shot shot--amber shot--flat">
-				<img src="/app-shots/veli-bugun.webp" width="645" height="1398" loading="lazy" alt="Veli paneli: çocuğun bugünkü tekrar durumu" />
-			</div>
-			<div class="shot shot--amber shot--flat" style="margin-top:28px">
-				<img src="/app-shots/veli-istatistik.webp" width="645" height="1398" loading="lazy" alt="Veli paneli: deneme sonuçları ve istatistik" />
+			<DeviceFrame
+				src="/app-shots/veli-bugun.webp"
+				width={645}
+				height={1398}
+				alt="Veli paneli: çocuğun bugünkü tekrar durumu"
+				glow="rgba(245, 158, 11, 0.16)"
+				trimTop={0.063}
+			/>
+			<div style="margin-top:28px">
+				<DeviceFrame
+					src="/app-shots/veli-istatistik.webp"
+					width={645}
+					height={1398}
+					alt="Veli paneli: deneme sonuçları ve istatistik"
+					glow="rgba(245, 158, 11, 0.16)"
+					trimTop={0.063}
+				/>
 			</div>
 		</div>
 	</div>

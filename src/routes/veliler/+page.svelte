@@ -2,6 +2,7 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import Tally from '$lib/components/Tally.svelte';
+	import DeviceFrame from '$lib/components/DeviceFrame.svelte';
 </script>
 
 <svelte:head>
@@ -53,11 +54,24 @@
 				</div>
 			</div>
 			<div class="veli-shots boot-4">
-				<div class="shot shot--amber">
-					<img src="/app-shots/veli-bugun.webp" width="645" height="1398" alt="Veli paneli ana ekranı: çocuğun bugünkü tekrar durumu" />
-				</div>
-				<div class="shot shot--amber shot--flat" style="margin-top:28px">
-					<img src="/app-shots/veli-istatistik.webp" width="645" height="1398" loading="lazy" alt="Veli paneli istatistik ekranı: deneme sonuçları ve son LGS puanı" />
+				<DeviceFrame
+					src="/app-shots/veli-bugun.webp"
+					width={645}
+					height={1398}
+					alt="Veli paneli ana ekranı: çocuğun bugünkü tekrar durumu"
+					glow="rgba(245, 158, 11, 0.2)"
+					trimTop={0.063}
+					eager
+				/>
+				<div style="margin-top:28px">
+					<DeviceFrame
+						src="/app-shots/veli-istatistik.webp"
+						width={645}
+						height={1398}
+						alt="Veli paneli istatistik ekranı: deneme sonuçları ve son LGS puanı"
+						glow="rgba(245, 158, 11, 0.16)"
+						trimTop={0.063}
+					/>
 				</div>
 			</div>
 		</div>

@@ -360,46 +360,6 @@ p {
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ───────── shot (gecede parlayan eser) ───────── */
-.shot {
-	position: relative;
-	border-radius: 24px;
-	padding: 10px;
-	background:
-		linear-gradient(var(--noir-2), var(--noir-2)) padding-box,
-		linear-gradient(140deg, rgba(96, 165, 250, 0.5), rgba(255, 255, 255, 0.1) 38%, rgba(255, 255, 255, 0.05) 62%, rgba(245, 158, 11, 0.32)) border-box;
-	border: 1px solid transparent;
-	box-shadow:
-		inset 0 1px 0 rgba(255, 255, 255, 0.06),
-		0 32px 64px -28px rgba(0, 0, 0, 0.7);
-}
-.shot::before {
-	content: '';
-	position: absolute;
-	inset: -16%;
-	z-index: -1;
-	pointer-events: none;
-	background: radial-gradient(52% 52% at 50% 44%, var(--shot-aura, rgba(37, 99, 235, 0.3)), transparent 70%);
-}
-.shot img {
-	border-radius: 15px;
-	width: 100%;
-	height: auto;
-	filter: brightness(0.97) contrast(1.02);
-}
-.shot--amber {
-	--shot-aura: rgba(245, 158, 11, 0.16);
-	background:
-		linear-gradient(var(--noir-2), var(--noir-2)) padding-box,
-		linear-gradient(140deg, rgba(245, 158, 11, 0.4), rgba(255, 255, 255, 0.08) 45%, rgba(96, 165, 250, 0.2)) border-box;
-}
-.shot--flat {
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-.shot--flat::before {
-	display: none;
-}
-
 /* ───────── hero ───────── */
 .hero {
 	padding-block: clamp(64px, 9vw, 120px) clamp(48px, 7vw, 96px);
@@ -442,8 +402,8 @@ p {
 .hero-stage {
 	position: relative;
 }
-.hero-stage .shot {
-	max-width: 420px;
+.hero-stage .device {
+	max-width: min(430px, 100%);
 	margin-inline: auto;
 }
 /* hero kinetik an — saf CSS (JS gerekmez), tek sefer */
@@ -536,8 +496,8 @@ p {
 .step-copy .t-h2 {
 	margin-top: 10px;
 }
-.step-scene .shot {
-	max-width: 400px;
+.step-scene .device {
+	max-width: min(410px, 100%);
 	margin-inline: auto;
 }
 .step-foot {
@@ -741,12 +701,9 @@ html.js .reveal.in .ray-stop:nth-child(4) .mark {
 .cell-media {
 	margin-top: 18px;
 }
-.cell-media img {
-	border-radius: 12px;
-	border: 1px solid var(--line-1);
-	width: 100%;
-	height: auto;
-	filter: brightness(0.97) contrast(1.02);
+.cell-media .device {
+	max-width: 330px;
+	margin-inline: auto;
 }
 /* kompakt yatay hücre (mobil) */
 @media (max-width: 879px) {
@@ -817,9 +774,7 @@ html.js .reveal.in .ray-stop:nth-child(4) .mark {
 		gap: 28px;
 	}
 }
-.stat-duo .shot {
-	padding: 8px;
-}
+
 
 /* ───────── veli şeridi (sakin oda) ───────── */
 .veli-band {
@@ -863,11 +818,8 @@ html.js .reveal.in .ray-stop:nth-child(4) .mark {
 	gap: 16px;
 	align-items: start;
 }
-.veli-shots .shot {
-	padding: 7px;
-}
-.veli-shots .shot img {
-	border-radius: 12px;
+.veli-shots .device {
+	width: 100%;
 }
 
 /* ───────── bilim köprüsü ───────── */
@@ -1462,4 +1414,10 @@ html.js .reveal.in {
 		border-color: var(--blue-400);
 		background: var(--blue-400);
 	}
+}
+
+/* defter bölümü cihazı */
+.defter-device .device {
+	max-width: min(430px, 100%);
+	margin-inline: auto;
 }
