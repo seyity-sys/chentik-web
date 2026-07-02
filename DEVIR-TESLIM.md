@@ -1,8 +1,35 @@
 # DEVIR-TESLIM — chentik-web (pazarlama sitesi)
 
-## ŞU AN (2026-07-02)
+## ŞU AN (2026-07-02 gece)
 
-**v3 "Başyapıt" (Sıcak Defter · Cetvel & Çentik) — 🎉 CANLIDA**
+**Aktif iş: redesign-v4-noir branch — v4 "NOIR · Neon Çentik"** 🔶 LOCALHOST ONAYI BEKLİYOR
+
+Koyu sinematik TAM yeniden kurgu (IA + metin + görsel serbest; v3 kuralları kalktı).
+SADECE branch; main'e merge YOK, deploy YOK (canlı = v3 debafa68).
+İnceleme: http://127.0.0.1:5199/ ve TELEFONDAN http://192.168.1.12:5199/
+(nohup; yeniden başlat: `cd ~/chentik-web && nohup npm run dev -- --port 5199 --host 0.0.0.0 > /tmp/chentik-web-dev.log 2>&1 &`).
+
+- Ürün gerçekleri: docs/URUN-GERCEKLERI-V4.md (27 kanıtlı CANLI gerçek; lgs-takip 3-ajan
+  keşif + çapraz doğrulama). KRİTİK: "AI Çözüm Asistanı" kodda YOK (revert edilmiş);
+  canlı v3'teki 2 veli cümlesi kodla çelişiyordu → v4 metni "öğrencinin izniyle" çerçevesinde.
+- Konsept: docs/KONSEPT-V4.md (3 varyant + yargıç; kazanan Neon Çentik + aşılar).
+- Gerçek app ekranları: static/app-shots/ (Teo hesabından Playwright, salt-okunur gezinme;
+  Kelime kartları ve üçüncü-taraf deneme adları kadraj dışı; WebP 1x+2x).
+- Sistem: tokens.css v4 NOIR bloku (mevcut değerler bit-bit aynı) + noir.css (site.css v3
+  silindi); Archivo Variable wdth (TR cmap ✓) + Spline Sans Mono; Fraunces/Inter yüklenmiyor.
+- Doğrulama: build+check 0 hata; 11 route 200/301; SEO head 7/7 byte-özdeş (tek istisna
+  theme-color #0a0b10); yasak grep 0 + motto 4 yerde; reklam-dili taraması 0; Lighthouse
+  mobil (prod build, wrangler dev) Perf 91 / A11y 97 / CLS 0 / TBT 0ms; yerel LCP 68ms(m)/
+  48ms(d); landing JS 42.4KB gz (<120). Önizlemeler: docs/v4-preview/.
+- Commitler: 7f84374 gerçekler+shotlar · 6ebf04c konsept · 4a99f41 sistem ·
+  341f121 bileşenler · 6e42531 sayfalar · e6d6bfe önizlemeler.
+- AÇIK KARARLAR: (1) YKS ağırlığı — varsayılan bento-ikincil; (2) sınav ekran görüntüsü
+  üçüncü-taraf deneme adları (bilfen/palme/mozaik) yüzünden kullanılmadı; (3) "beta boyunca
+  ücretsiz" zaman-bağlı çerçeve; (4) veli-shot'lar v3 setinden — taze çekim için veli test
+  hesabı bilgisi gerekir (DEVIR'de yok, uydurulmadı); (5) simüle yavaş-4G LCP 3.2s
+  (bütçe "yerel"di, yerel ✓) — istenirse ayrı optimizasyon işi.
+
+**Önceki: v3 "Sıcak Defter" — 🎉 CANLIDA** (debafa68; rollback 216275d9)
 
 Seyit localhost onayı sonrası canlıya alındı (2026-07-02): `redesign-v3-fable` →
 main FF-merge (8ec2eb7) + push; `npm run build` + `npx wrangler versions upload`
