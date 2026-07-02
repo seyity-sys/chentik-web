@@ -118,3 +118,60 @@
 	--dur-draw: 700ms;
 	--ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+/* ================================================
+   V4 "NOIR · Neon Çentik" tokenları (redesign-v4-noir)
+   Yukarıdaki tüm değerler DEĞİŞMEZ; bu blok yalnız EKLER.
+   Ders NEON türevleri = Tw400 karşılıkları (on-dark mikro-vurgu);
+   asıl --color-ders-* (Tw700) app ile senkron, bit-bit aynı.
+   ================================================ */
+:root {
+	/* Kanvas katmanları */
+	--noir-0: #07080c;
+	--noir-1: #0a0b10;
+	--noir-2: #0e1017;
+	--noir-3: #131722;
+	--line-1: rgba(148, 163, 184, 0.1);
+	--line-2: rgba(148, 163, 184, 0.18);
+
+	/* Mürekkep (koyu zemin) */
+	--ink-hi: #f2f4f8;
+	--ink-body: rgba(228, 233, 243, 0.78);
+	--ink-mute: rgba(228, 233, 243, 0.58);
+	--ink-faint: rgba(228, 233, 243, 0.38); /* yalnız dekoratif/büyük */
+
+	/* Işık — mavi ANA, amber İKİNCİ (logo mirası) */
+	--blue: #2563eb;
+	--blue-400: #60a5fa;
+	--blue-300: #93c5fd;
+	--blue-glow: rgba(37, 99, 235, 0.35);
+	--amber-400: #f59e0b;
+	--amber-300: #fbbf24;
+	--amber-glow: rgba(245, 158, 11, 0.25);
+	--indigo-400: #818cf8;
+
+	/* Ders NEON türevleri (on-dark; Tw400) */
+	--neon-turkce: #f472b6;
+	--neon-matematik: #60a5fa;
+	--neon-fen: #34d399;
+	--neon-inkilap: #fbbf24;
+	--neon-din: #22d3ee;
+	--neon-sosyal: #fb923c;
+	--neon-yabanci: #a78bfa;
+	--neon-veli: #c4b5fd;
+	--neon-success: #34d399;
+
+	/* Tipografi — v4 sesleri */
+	--font-sans: 'Archivo Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	/* --font-mono v3 blokundan (Spline Sans Mono Variable) aynen kullanılır */
+	--t-display: clamp(2.9rem, 1.7rem + 5.2vw, 5.25rem);
+	--t-h1n: clamp(2.25rem, 1.7rem + 2.6vw, 3.5rem);
+	--t-h2n: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+	--t-h3n: 1.375rem;
+	--t-leden: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+	--t-stat: clamp(2.5rem, 1.8rem + 3vw, 4rem);
+
+	/* v4 motion (v3 değerlerini bu branch'te günceller) */
+	--dur-2: 260ms;
+	--dur-3: 640ms;
+}
