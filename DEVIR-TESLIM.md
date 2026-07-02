@@ -22,7 +22,10 @@ SADECE branch; main'e merge YOK, deploy YOK (canlı = v3 debafa68).
   mobil (prod build, wrangler dev) Perf 91 / A11y 97 / CLS 0 / TBT 0ms; yerel LCP 68ms(m)/
   48ms(d); landing JS 42.4KB gz (<120). Önizlemeler: docs/v4-preview/.
 - Commitler: 7f84374 gerçekler+shotlar · 6ebf04c konsept · 4a99f41 sistem ·
-  341f121 bileşenler · 6e42531 sayfalar · e6d6bfe önizlemeler.
+  341f121 bileşenler · 6e42531 sayfalar · e6d6bfe önizlemeler · +DeviceFrame turu
+  (Seyit geri bildirimi): TÜM app-shot'lar vektörel iPhone gövdesi + çizili 9:41
+  status bar + bilinçli taşma/fade sunumuna geçti (DeviceFrame.svelte, .shot öldü;
+  veli çekimlerinin kendi bar'ı kırpıldı). Ölçüm sonrası: LH 92/97, JS 44.2KB, LCP 76ms.
 - AÇIK KARARLAR: (1) YKS ağırlığı — varsayılan bento-ikincil; (2) sınav ekran görüntüsü
   üçüncü-taraf deneme adları (bilfen/palme/mozaik) yüzünden kullanılmadı; (3) "beta boyunca
   ücretsiz" zaman-bağlı çerçeve; (4) veli-shot'lar v3 setinden — taze çekim için veli test
