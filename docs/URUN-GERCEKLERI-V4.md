@@ -109,3 +109,42 @@ yalnız temkinli dille ('Yakında' vb.), 'planli' olanlar sitede YER ALMAZ.
 - Bildirim iddiası yalnız 'uygulamada' kaydıyla; çoklu çocuk 'birden fazla' (sayısız); ücretsiz='Beta boyunca ücretsiz'.
 - AI yalnız SINIFLANDIRIR (ders/konu/hata türü) — 'soruyu çözer' ASLA; model adı/kota yazılmaz.
 - Store: yalnız 'Yakında'. Kullanıcı sayısı/başarı oranı/fiyat: YOK.
+
+## KAYIT MODELİ (derin araştırma — 2 bağımsız iz + çapraz doğrulama, 2 Tem 2026)
+
+**Model (kanıtlı):** UI'daki TEK kayıt yolu velidir. Veli kaydolur → "Çocuk profili oluştur"
+(3 adımlı KVKK wizard'ı: aydınlatma → açık rıza → çocuk formu; YAŞ/doğum tarihi sorulmaz,
+sınıf/LGS yılı seçilir) → profil kartından "Kurulum kodu al" (6 haneli, tek kullanımlık,
+15 dk geçerli) → çocuk "Çocuk girişi"nde kodu girer ve İLK girişte KENDİ 6 haneli PIN'ini
+belirler; sonraki girişler PIN + hatırlanan cihazla.
+
+1. Tek görünür kayıt: /login "Hesap Oluştur" → RolSecimSheet tek buton "Veli olarak kayıt ol".
+   App aynen der: "Öğrenci kendi kaydolmaz. Çocuk hesabını veli açar; çocuk girişten kurulum
+   koduyla bağlanır." — `RolSecimSheet.svelte:54,80` · `login/+page.svelte:578,593`
+2. Çocuk profili: `veli/cocuk-ekle/+page.svelte:242,304,379,398,427,451,474,546` (yaş alanı YOK;
+   açık rıza ADIM 2) · server yaş kontrolü yapmaz: `api/veli/cocuk-olustur/+server.ts:64-70`
+3. Kod terimi = **"Kurulum kodu"** (tek gerçek ad; "veli kodu"/"katılım kodu" repo'da yok):
+   `profil/+page.svelte:1191,1193,1196` ("Kurulum kodu al", "15 dk geçerli — çocuğun cihazında
+   'Çocuk girişi'ne bu kodu + PIN'i girsin.") · `cocuk-giris/+page.svelte:242,247` ·
+   `migrations/66:31-33` (numeric-6, 15dk TTL, tek kullanımlık)
+4. PIN'i ÇOCUK belirler (veli koymaz): `api/cocuk-giris/+server.ts:16` · `cocuk-giris:257-260`;
+   5 yanlış/15dk kilit `api/cocuk-giris:103-116`
+5. "Yanlışlarımı görebilir" (paylasim_aktif) CANLI ve karar öğrencide (yönetilen çocuk dahil);
+   RLS de zorlar: `profil/+page.svelte:1097,1109,1115-1116,357-367` · `veli/bugun/+page.ts:35` ·
+   `migr18:31` → sitedeki "öğrencinin izniyle" çerçevesi DOĞRU, korunur.
+6. "Davet kodu" ÖLÜ legacy (route+endpoint+DB kolonu duruyor, inbound link/tüketici 0; yeni
+   davet üreten akış yok): `register/davet/+page.ts:14-15` · orphan `OgrenciDavetSheet` —
+   sitede KULLANILMAZ.
+7. Legacy self-register + 13-yaş veli-onay zinciri kodda DORMANT (IA'dan linksiz; yalnız URL
+   yazan tetikler): `register/ogrenci/+page.ts:6-8` · `register/veli-onayi/+page.svelte:179` —
+   site bu akışı ANLATMAZ.
+
+**Site metin kuralları (bu bölümden):** "Çocuk hesabını veli açar" çerçevesi; "kurulum kodu"
+terimi; "kod + çocuğun kendi PIN'i"; yaş/13-yaş anlatısı YOK (rıza kayıtta veliden);
+"öğrencinin izniyle" korunur.
+
+**AÇIK KARAR (legal çelişkileri — metne DOKUNULMADI):** cocuk-verisi sayfasının "Veli Onay
+Süreci" (Adım 1: Çocuk Hesap Açar → veli e-postası → link onayı) ve "13 yaş eşiği" anlatısı ile
+KVKK/gizlilik metinlerindeki "Davet kodu ve bağlantı tarihi" maddesi GÜNCEL veli-kurar modeliyle
+çelişiyor; KVKK dokümanları versiyonlu → ayrı sprint. Ayrıca app-içi tutarsızlık: cocuk-ekle
+aydınlatması veliye "paylaşımı durdurabilirsiniz" der ama toggle çocuktadır (app işi, not).
