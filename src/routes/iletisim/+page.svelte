@@ -1,17 +1,7 @@
 <script lang="ts">
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import DownloadModal from '$lib/components/DownloadModal.svelte';
-
-	let modalOpen = $state(false);
-
-	function openDownload() {
-		modalOpen = true;
-	}
-
-	function closeDownload() {
-		modalOpen = false;
-	}
+	import Tally from '$lib/components/Tally.svelte';
 </script>
 
 <svelte:head>
@@ -34,75 +24,38 @@
 	<link rel="icon" type="image/svg+xml" href="/logo-mono.svg" />
 </svelte:head>
 
-<Nav onDownload={openDownload} activePage="iletisim" />
+<Nav activePage="iletisim" />
 
-<main class="section contact-page" id="top">
-	<div class="container contact-container">
-		<div class="section-head">
-			<div class="eyebrow"><span class="dot"></span>İletişim</div>
-			<h1 class="h2 contact-h1">
-				Bir fikrin mi var?<br />
-				<span style="color:var(--accent);">Yaz bize.</span>
-			</h1>
-			<p class="lede">
-				Soru, öneri, işbirliği — hepsi için kapımız açık. En geç birkaç gün içinde döneriz.
-			</p>
+<main class="section stage stage--deep grain" id="top" style="min-height:62vh; --aura-x:50%; --aura-y:20%">
+	<div class="container">
+		<div class="eyebrow boot-1"><Tally n={1} />İletişim</div>
+		<h1 class="t-display boot-2">Yazın.</h1>
+		<p class="lede boot-3" style="margin-top:20px">
+			Soru, öneri, işbirliği — en geç birkaç gün içinde döneriz. KVKK başvuruları için de aynı
+			adres geçerlidir.
+		</p>
+
+		<div class="contact-card boot-4">
+			<div class="contact-inner">
+				<a class="contact-row" href="mailto:merhaba@chentik.app">
+					<span class="mark mark--done" aria-hidden="true"></span>
+					<span><span class="contact-key">E-posta</span><span class="contact-val">merhaba@chentik.app</span></span>
+				</a>
+				<a class="contact-row" href="https://instagram.com/chentik.official" target="_blank" rel="noopener">
+					<span class="mark" aria-hidden="true"></span>
+					<span><span class="contact-key">Instagram</span><span class="contact-val">@chentik.official</span></span>
+				</a>
+				<a class="contact-row" href="https://app.chentik.app" rel="noopener">
+					<span class="mark" aria-hidden="true"></span>
+					<span><span class="contact-key">Uygulama</span><span class="contact-val">app.chentik.app</span></span>
+				</a>
+			</div>
 		</div>
 
-		<div class="contact-card">
-			<a class="contact-row" href="mailto:merhaba@chentik.app">
-				<span class="contact-ic" aria-hidden="true">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-						<rect x="3" y="5" width="18" height="14" rx="2" />
-						<path d="m3 7 9 6 9-6" />
-					</svg>
-				</span>
-				<span class="contact-text">
-					<span class="contact-key">E-posta</span>
-					<span class="contact-val">merhaba@chentik.app</span>
-				</span>
-			</a>
-
-			<a class="contact-row" href="https://www.chentik.app">
-				<span class="contact-ic" aria-hidden="true">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-						<circle cx="12" cy="12" r="9" />
-						<path d="M3.5 9h17M3.5 15h17M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-					</svg>
-				</span>
-				<span class="contact-text">
-					<span class="contact-key">Web</span>
-					<span class="contact-val">www.chentik.app</span>
-				</span>
-			</a>
-
-			<a
-				class="contact-row"
-				href="https://instagram.com/chentik.official"
-				target="_blank"
-				rel="noopener"
-			>
-				<span class="contact-ic" aria-hidden="true">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-						<rect x="3" y="3" width="18" height="18" rx="5" />
-						<circle cx="12" cy="12" r="4" />
-						<circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-					</svg>
-				</span>
-				<span class="contact-text">
-					<span class="contact-key">Instagram</span>
-					<span class="contact-val">@chentik.official</span>
-				</span>
-			</a>
-		</div>
-
-		<p class="contact-kvkk">
-			KVKK kapsamındaki başvurularınız için de aynı adresi kullanabilirsiniz. Verilerinizin nasıl
-			işlendiğini <a href="/kvkk-aydinlatma">KVKK Aydınlatma</a> sayfasında bulabilirsiniz.
+		<p class="micro boot-4" style="margin-top:22px">
+			Verilerinizin nasıl işlendiği: <a href="/kvkk-aydinlatma" style="color:var(--blue-400); text-decoration:underline; text-underline-offset:3px">KVKK Aydınlatma</a>
 		</p>
 	</div>
 </main>
 
 <Footer />
-
-<DownloadModal open={modalOpen} onClose={closeDownload} />
