@@ -2,11 +2,17 @@
 
 ## ŞU AN (2026-07-02)
 
-**Aktif iş: redesign-v3-fable branch — v3 "Başyapıt" (Sıcak Defter · Cetvel & Çentik)** 🔶 LOCALHOST ONAYI BEKLİYOR
+**v3 "Başyapıt" (Sıcak Defter · Cetvel & Çentik) — 🎉 CANLIDA**
 
-Tam görsel redesign; SADECE branch'te, main'e merge YOK, deploy YOK (canlı hâlâ KALIP-2
-ver 216275d9). Dev server: `http://127.0.0.1:5199/` (nohup, log `/tmp/chentik-web-dev.log`;
-yeniden başlatma: `cd ~/chentik-web && nohup npm run dev -- --port 5199 --host 127.0.0.1 > /tmp/chentik-web-dev.log 2>&1 &`).
+Seyit localhost onayı sonrası canlıya alındı (2026-07-02): `redesign-v3-fable` →
+main FF-merge (8ec2eb7) + push; `npm run build` + `npx wrangler versions upload`
+(preview'da 11 route + 940-parça metin paritesi + SEO doğrulandı) →
+`npx wrangler versions deploy 69fbae4b-...@100%`.
+**Canlı versiyon: `69fbae4b-ed46-4a36-8096-d51c2430e9c7`.
+ROLLBACK: `npx wrangler versions deploy 216275d9-dcc1-415c-85bb-306689cfa020@100% -y`** (eski KALIP-2).
+Canlı mühür: 9 route 200, theme-color #fdfcfa, Fraunces asset'i sunuluyor, motto/
+kritik metinler grep'le doğrulandı. Not: toast metni ("Çok yakında App Store…")
+{#if soon} istemci-koşullu — SSR'da görünmemesi normal.
 
 - Konsept: `docs/KONSEPT-V3.md` (3-konsept paneli + yargıç; kazanan Sıcak Defter 42.5/50).
   Metin envanteri: `docs/METIN-ENVANTERI.md`.
