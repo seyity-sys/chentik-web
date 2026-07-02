@@ -7,7 +7,6 @@
 		const el = flowEl;
 		let raf = 0;
 		let nodes: { n: HTMLElement; top: number }[] = [];
-		const mq = window.matchMedia('(min-width: 1024px)');
 
 		const measure = () => {
 			nodes = Array.from(el.querySelectorAll<HTMLElement>('.node')).map((n) => {
@@ -23,7 +22,6 @@
 
 		const update = () => {
 			raf = 0;
-			if (!mq.matches) return; // cetvel yalnız ≥1024px'te görünür
 			const rect = el.getBoundingClientRect();
 			const prog = Math.max(0, Math.min(rect.height, window.innerHeight * 0.5 - rect.top));
 			el.style.setProperty('--spine-progress', `${prog}px`);

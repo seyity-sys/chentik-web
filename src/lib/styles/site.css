@@ -29,9 +29,19 @@
 	--din: var(--color-ders-din);
 	--ing: var(--color-ders-yabanci);
 	--veli: var(--rol-veli);
-	/* kenar cetveli geometrisi (≥1024px) */
-	--rail-x: 30px;
-	--rail-pad: 44px;
+	/* kenar cetveli geometrisi — mobilde kompakt, ≥1024px'te geniş */
+	--rail-x: 17px;
+	--rail-pad: 31px;
+	--node-size: 28px;
+	--node-icon: 13px;
+}
+@media (min-width: 1024px) {
+	:root {
+		--rail-x: 30px;
+		--rail-pad: 44px;
+		--node-size: 36px;
+		--node-icon: 17px;
+	}
 }
 
 /* ───────── base ───────── */
@@ -455,132 +465,120 @@ p {
 	border-color: var(--ink-3);
 }
 
-/* ───────── kenar cetveli (flow + rail) ───────── */
+/* ───────── kenar cetveli (flow + rail) — TÜM genişliklerde ───────── */
 .flow {
 	width: 100%;
 	max-width: 1120px;
 	margin: 0 auto;
 	position: relative;
-	padding-inline: clamp(20px, 5vw, 40px);
+	padding-right: clamp(18px, 5vw, 40px);
+	padding-left: calc(var(--rail-x) + var(--rail-pad));
 }
 .spine {
-	display: none;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: var(--rail-x);
+	width: 1px;
+	z-index: 0;
+	pointer-events: none;
 }
-@media (min-width: 1024px) {
-	.flow {
-		padding-left: calc(var(--rail-x) + var(--rail-pad));
-	}
-	.spine {
-		display: block;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: var(--rail-x);
-		width: 1px;
-		z-index: 0;
-		pointer-events: none;
-	}
-	.spine-line {
-		position: absolute;
-		inset: 0;
-		background: var(--border-2);
-		opacity: 0.55;
-	}
-	.spine-fill {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: var(--spine-progress, 0px);
-		background: linear-gradient(180deg, var(--amber) 0%, var(--accent) 100%);
-	}
-	.spine-tip {
-		position: absolute;
-		left: 50%;
-		top: var(--spine-progress, 0px);
-		width: 7px;
-		height: 7px;
-		border-radius: 50%;
-		transform: translate(-50%, -50%);
-		background: var(--accent);
-		box-shadow: 0 0 0 3px var(--bg);
-	}
+.spine-line {
+	position: absolute;
+	inset: 0;
+	background: var(--border-2);
+	opacity: 0.55;
+}
+.spine-fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: var(--spine-progress, 0px);
+	background: linear-gradient(180deg, var(--amber) 0%, var(--accent) 100%);
+}
+.spine-tip {
+	position: absolute;
+	left: 50%;
+	top: var(--spine-progress, 0px);
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--accent);
+	box-shadow: 0 0 0 3px var(--bg);
 }
 
 /* node'lar — cetvel üstünde, kenetlenen duraklar */
-.node {
-	display: none;
-}
 .node-host {
 	position: relative;
 }
-@media (min-width: 1024px) {
-	.node {
-		position: absolute;
-		left: calc(-1 * var(--rail-pad));
-		top: 4px;
-		width: 36px;
-		height: 36px;
-		transform: translateX(-50%);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		background: var(--bg);
-		border: 1.5px solid var(--amber);
-		color: var(--amber);
-		z-index: 2;
-		box-shadow: 0 0 0 6px var(--bg);
-		transition:
-			background var(--dur-2) var(--ease),
-			border-color var(--dur-2) var(--ease),
-			color var(--dur-2) var(--ease);
-	}
-	.node .tick,
-	.node .tally {
-		width: 17px;
-		height: 17px;
-	}
-	/* kenetlenme: uç node'a varınca amber halka → dolu mavi */
-	.node.passed {
-		border-color: var(--accent);
-		background: var(--accent);
-		color: var(--white);
-	}
-	.node-start::after {
-		content: '';
-		width: 9px;
-		height: 9px;
-		border-radius: 50%;
-		border: 2px solid currentColor;
-	}
-	.node-veli {
-		border-color: var(--veli);
-		color: var(--veli);
-	}
-	.node-veli.passed {
-		border-color: var(--veli);
-		background: var(--veli);
-		color: var(--white);
-	}
-	.node-end,
-	.node-end.passed {
-		border-color: var(--accent);
-		background: var(--accent);
-		color: var(--white);
-	}
-	.feat .node {
-		top: 34px;
-	}
-	.hero .node {
-		top: 10px;
-	}
-	.final .node {
-		top: 12px;
-		left: 50%;
-		transform: translateX(-50%);
-		position: absolute;
-	}
+.node {
+	position: absolute;
+	left: calc(-1 * var(--rail-pad));
+	top: 4px;
+	width: var(--node-size);
+	height: var(--node-size);
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--bg);
+	border: 1.5px solid var(--amber);
+	color: var(--amber);
+	z-index: 2;
+	box-shadow: 0 0 0 5px var(--bg);
+	transition:
+		background var(--dur-2) var(--ease),
+		border-color var(--dur-2) var(--ease),
+		color var(--dur-2) var(--ease);
+}
+.node .tick,
+.node .tally {
+	width: var(--node-icon);
+	height: var(--node-icon);
+}
+/* kenetlenme: uç node'a varınca amber halka → dolu mavi */
+.node.passed {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: var(--white);
+}
+.node-start::after {
+	content: '';
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	border: 2px solid currentColor;
+}
+.node-veli {
+	border-color: var(--veli);
+	color: var(--veli);
+}
+.node-veli.passed {
+	border-color: var(--veli);
+	background: var(--veli);
+	color: var(--white);
+}
+.node-end,
+.node-end.passed {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: var(--white);
+}
+.feat .node {
+	top: 34px;
+}
+.hero .node {
+	top: 10px;
+}
+.final .node {
+	top: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
 }
 
 /* ───────── hero ───────── */
@@ -665,7 +663,7 @@ p {
 /* çizim: pathLength=1 ile (saf CSS animasyon — JS gerektirmez) */
 .tick-draw {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1.02;
+	stroke-dashoffset: 1;
 	animation: tick-draw var(--dur-draw) var(--ease) forwards;
 }
 .tick-draw:nth-child(2) {
@@ -685,26 +683,28 @@ p {
 		stroke-dashoffset: 0;
 	}
 }
-/* IO tetiklemeli varyant (final CTA) — yalnız JS varken gizli başlar */
-html.js .reveal .tick-wait {
+/* IO tetiklemeli varyant (final CTA) — duraklatılmış başlar, .in gelince oynar.
+   (Önceki 'animation:none' kuralı özgüllükte tetikleyiciyi eziyordu — çizim
+   hiç koşmuyordu; play-state longhand'ini yüksek özgüllüklü .in kuralı açar.) */
+html.js .tick-wait {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1.02;
-	animation: none;
+	stroke-dashoffset: 1;
+	animation: tick-draw var(--dur-draw) var(--ease) forwards paused;
 }
-.reveal.in .tick-wait {
-	animation: tick-draw var(--dur-draw) var(--ease) forwards;
-}
-.reveal.in .tick-wait:nth-child(2) {
+html.js .tick-wait:nth-child(2) {
 	animation-delay: 90ms;
 }
-.reveal.in .tick-wait:nth-child(3) {
+html.js .tick-wait:nth-child(3) {
 	animation-delay: 180ms;
 }
-.reveal.in .tick-wait:nth-child(4) {
+html.js .tick-wait:nth-child(4) {
 	animation-delay: 270ms;
 }
-.reveal.in .cross.tick-wait {
+html.js .cross.tick-wait {
 	animation-delay: 480ms;
+}
+html.js .reveal.in .tick-wait {
+	animation-play-state: running;
 }
 
 /* trust chipleri */
@@ -1514,7 +1514,7 @@ html.js .reveal .tick-wait {
 /* eğri çizimi — reveal ile mürekkep (yalnız JS varken gizli başlar) */
 html.js .draw {
 	stroke-dasharray: 1;
-	stroke-dashoffset: 1.02;
+	stroke-dashoffset: 1;
 	transition: stroke-dashoffset 900ms var(--ease) 200ms;
 }
 .reveal.in .draw,
