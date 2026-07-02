@@ -1,5 +1,31 @@
 # DEVIR-TESLIM — chentik-web (pazarlama sitesi)
 
+## ŞU AN (2026-07-02 gece)
+
+**HOTFIX CANLIDA: Legal kayıt-modeli düzeltmesi** 🎉 (Seyit onayıyla deploy)
+
+Canlı versiyon: **`37cb54ae-60c0-4b75-a35a-f567c61b201c`**
+ROLLBACK: `npx wrangler versions deploy 6eb6ab4d-50ee-4df8-843e-3c5ba71271da@100% -y`
+(not: 6eb6ab4d = 2 Tem 05:44'te atılan, main ile içerik-özdeş ara deploy; debafa68 ardılı)
+
+Commitler: `bbe1231` (14 legal + 4 pazarlama cerrahi düzeltme) + `1adcce8` (legal
+description'lar; canonical/og:url/title DONUK) → main FF-merge + push + `wrangler deploy`.
+İçerik: /cocuk-verisi "Veli Onay Süreci" GERÇEK akışa (hesabı veli açar → kurulum kodu
+6 haneli/tek kullanımlık/15 dk → çocuk kendi PIN'ini belirler; yaş/doğum tarihi sorulmaz),
+yaş tablosu/eşik, çocuğa anlatım; gizlilik 3.4 şema-kanıtlı (SHA-256 cihaz özeti, denetim
+alanları); tüm legal v2.1 / 2 Temmuz 2026; pazarlama yanlış-beyanları ("davet kodu"
+negatifleri, "iki taraf kaldırır", "içeriğini görmez") düzeltildi. Kanıt:
+docs/URUN-GERCEKLERI-V4.md "Kayıt Modeli" (v4 branch'inde) + lgs-takip migr66/68.
+Canlı mühür: 5 route 200, yeni metin örneklemi VAR, eski-model grep 0 (kanun-bilgisi
+satırları bilinçli duruyor), canonical/title donuk, yeni description'lar canlıda.
+
+AÇIK KARARLAR: (1) lgs-takip duplicate legal içerikleri (GizlilikContent "Davet kodu" vb.)
++ politika_versiyonu bump/yeniden-onay gerekir mi — ayrı sprint; (2) ÇV §6 "onay geri
+alındı → 24 saat" satırı kodda doğrulanamadı, ayrıca ele alınmalı; (3) cocuk-ekle
+aydınlatma tutarsızlığı (app işi); (4) SEO title/canonical donuk kaldı (kural).
+
+**PARK: v4 NOIR** — redesign-v4-noir branch'inde bekliyor (localhost onayı).
+
 ## ŞU AN (2026-07-02)
 
 **v3 "Başyapıt" (Sıcak Defter · Cetvel & Çentik) — 🎉 CANLIDA**
