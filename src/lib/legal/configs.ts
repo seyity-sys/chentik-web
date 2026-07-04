@@ -55,7 +55,7 @@ export const KVKK: LegalPage = {
 	title: 'KVKK Aydınlatma Metni',
 	subtitle:
 		'6698 sayılı Kişisel Verilerin Korunması Kanunu Madde 10 kapsamında veri sorumlusunun aydınlatma yükümlülüğü metni.',
-	updated: '2 Temmuz 2026',
+	updated: '3 Temmuz 2026',
 	published: '20 Mayıs 2026',
 	version: '2.1',
 	sections: [
@@ -176,10 +176,10 @@ export const KVKK: LegalPage = {
 			body: [
 				UL([
 					'Aktif hesap: Hesap aktif olduğu sürece',
-					'Hesap silme sonrası: 30 gün pasif (geri dönüş için)',
-					'30 günden sonra: Kalıcı silinir',
+					'Uygulama içinden hesap silme: Anında ve geri alınamaz biçimde silinir',
+					'E-postayla silme talebi: En geç 30 gün içinde sonuçlandırılır (KVKK Madde 13)',
 					'Yedek sistemler: 90 gün',
-					'KVKK onay kayıtları: 10 yıl (yasal yükümlülük)'
+					'KVKK onay kayıtları: Hesap süresince saklanır; hesap silindiğinde onay kayıtları da silinir'
 				])
 			]
 		},
@@ -273,7 +273,7 @@ export const GIZ: LegalPage = {
 	kicker: 'Yasal · Gizlilik',
 	title: 'Gizlilik Politikası',
 	subtitle: 'Verinizi nasıl topladığımız, kullandığımız ve koruduğumuz hakkında ayrıntılı bilgi.',
-	updated: '2 Temmuz 2026',
+	updated: '3 Temmuz 2026',
 	published: '20 Mayıs 2026',
 	version: '2.1',
 	sections: [
@@ -435,10 +435,10 @@ export const GIZ: LegalPage = {
 					['Veri Tipi', 'Saklama Süresi'],
 					[
 						['Aktif hesap verisi', 'Hesap aktif olduğu sürece'],
-						['Silinen hesap', '30 gün pasif (geri dönüş için)'],
-						['Silinen hesap (kalıcı)', '30 gün sonra tüm sistemlerden silinir'],
+						['Hesap silme (uygulama içinden)', 'Anında ve geri alınamaz biçimde silinir'],
+						['E-postayla silme talebi', 'En geç 30 gün içinde sonuçlandırılır (KVKK Madde 13)'],
 						['Yedekler', '90 gün sonra silinir'],
-						['KVKK onay kayıtları', '10 yıl (yasal yükümlülük)'],
+						['KVKK onay kayıtları', 'Hesap süresince; hesap silindiğinde onay kayıtları da silinir'],
 						['Log kayıtları', '1 yıl']
 					]
 				)
@@ -506,7 +506,7 @@ export const COCUK: LegalPage = {
 	title: 'Çocuk Verisi Koruması',
 	subtitle:
 		'Çocuk hesapları için özel düzenlemeler, veli yönetimli kayıt süreci ve veri minimizasyonu.',
-	updated: '2 Temmuz 2026',
+	updated: '3 Temmuz 2026',
 	published: '20 Mayıs 2026',
 	version: '2.1',
 	intro: CO(
@@ -635,9 +635,9 @@ export const COCUK: LegalPage = {
 				UL([
 					'Çocuğun verilerinin işlenmesine itiraz',
 					'Verilerin silinmesi',
-					'Veli onayını istediğiniz zaman geri alma',
+					'Veli onayını istediğiniz zaman geri alma (çocuğun profilini uygulama içinden silerek ya da e-postayla başvurarak)',
 					'Veri kopyası CSV/JSON formatında',
-					'Çocuğun hesabını kapatma'
+					'Çocuğun hesabını uygulama içinden silme — silme anında ve geri alınamazdır'
 				]),
 				SH('5.3 Hak Kullanımı'),
 				UL(['E-posta: merhaba@chentik.app', 'Yanıt süresi: 30 gün (KVKK Madde 13)'])
@@ -651,10 +651,10 @@ export const COCUK: LegalPage = {
 					['Durum', 'Saklama'],
 					[
 						['Aktif hesap', 'Hesap aktif olduğu sürece'],
-						['Veli onayı geri alındı', '24 saat içinde tüm veriler silinir'],
-						['Çocuk hesabı kapattı', '30 gün pasif (veli geri açabilir)'],
-						['30 gün sonra', 'Kalıcı silme'],
-						['Veli onay kaydı', '10 yıl (yasal yükümlülük)']
+						['Veli, çocuğun profilini uygulama içinden sildi', 'Anında ve geri alınamaz biçimde silinir (soru fotoğrafları dahil)'],
+						['Çocuk hesabını kendisi kapatmak istedi', 'Yönetilen çocuk hesabı kendini silemez; silme yetkisi velidedir'],
+						['E-postayla silme talebi', 'En geç 30 gün içinde sonuçlandırılır (KVKK Madde 13)'],
+						['Veli onay kaydı', 'Hesap süresince saklanır; hesap silindiğinde onay kaydı da silinir']
 					]
 				)
 			]
@@ -739,7 +739,7 @@ export const COCUK: LegalPage = {
 			h: 'Versiyon Geçmişi',
 			body: [
 				UL([
-					'v2.1 — 2 Temmuz 2026 — Kayıt modeli guncellendi: hesabı veli açar, çocuk tek kullanımlık kurulum koduyla cihazını bağlar; yaş/doğum tarihi sorulmaz',
+					'v2.1 — 3 Temmuz 2026 — Kayıt modeli güncellendi: hesabı veli açar, çocuk tek kullanımlık kurulum koduyla cihazını bağlar; yaş/doğum tarihi sorulmaz. Silme/saklama satırları gerçek davranışa çekildi',
 						'v2.0 — 20 Mayıs 2026 — Sıkı veli onayı süreci, yaş eşiği netleştirildi',
 					'v1.0 — 15 Mayıs 2026 — İlk versiyon (yumuşak yaklaşım)'
 				])
